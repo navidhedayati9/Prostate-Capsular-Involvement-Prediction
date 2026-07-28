@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# R session files
+.RData
+.Rhistory
+.Rapp.history
+.Ruserdata
+
+# R project-specific files
+.Rproj.user/
+
+# Raw data
+data/raw/*
+!data/raw/README.md
+
+# Temporary files
+*.tmp
+*.log
+*~
+
+# Rendered report intermediates
+report/_freeze/
+report/.quarto/
