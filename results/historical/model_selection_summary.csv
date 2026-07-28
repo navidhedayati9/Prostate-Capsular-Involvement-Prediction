@@ -1,0 +1,4 @@
+"model","formula","degrees_freedom","aic","observations"
+"candidate","capsule ~ dcaps + dpros + psa + gleason + dpros:dcaps + dpros:psa +      dpros:gleason + dcaps:psa + dcaps:gleason + psa:gleason",11,398.72785601247,377
+"stepAIC_selected","capsule ~ dpros + psa + gleason + dpros:psa",5,391.935479695571,377
+"reported_final","capsule ~ factor(dpros) + psa + gleason",6,393.220349919042,377

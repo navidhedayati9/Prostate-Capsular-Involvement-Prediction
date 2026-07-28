@@ -1,0 +1,27 @@
+Historical reproduction summary
+Run date: 2026-07-28
+R version: R version 4.6.1 (2026-06-24)
+Input: data/processed/prostate_2018.rds
+Original observations: 380
+Complete-case observations: 377
+Candidate model AIC: 398.727856
+stepAIC-selected formula: capsule ~ dpros + psa + gleason + dpros:psa
+stepAIC-selected AIC: 391.9354797
+Reported final formula: capsule ~ factor(dpros) + psa + gleason
+Stepwise model matches reported final model: no
+Reported final model AIC: 393.2203499
+Reported final AIC reproduces at two decimals: yes
+Coefficient estimates reproduced at two decimals: 6/6
+Wald coefficient confidence intervals reproduced at two decimals: 6/6
+Odds ratios reproduced at two decimals: 6/6
+Odds-ratio confidence intervals reproduced at two decimals: 6/6
+Observations with |standardized Pearson residual| > 2: 13
+Observations with Cook's distance > 4/n: 25
+Observations with leverage > 2p/n: 24
+Observations flagged by at least one diagnostic screen: 43
+Largest absolute coefficient change in conservative combined-flag removal stress test: 4.2807039
+Diagnostic interpretation: screening flags identify observations for review and do not, by themselves,
+justify excluding observations from the primary historical reproduction.
+Important discrepancy: reported p-value for factor(dpros)2 = 0.31; the model-derived p-value is 0.029973813
+Interpretation boundary: results concern capsule penetration among patients with prostate cancer,
+not initial prostate cancer detection.

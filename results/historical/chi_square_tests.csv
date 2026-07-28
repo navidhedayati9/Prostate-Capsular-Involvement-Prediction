@@ -1,0 +1,4 @@
+"variable","statistic","degrees_freedom","p_value","method"
+"race",1.38741332320939e-30,1,0.999999999999999,"Pearson's Chi-squared test with Yates' continuity correction"
+"dpros",38.7358521105632,3,1.97433041792705e-08,"Pearson's Chi-squared test"
+"dcaps",21.1616696969435,1,4.22123011153775e-06,"Pearson's Chi-squared test with Yates' continuity correction"

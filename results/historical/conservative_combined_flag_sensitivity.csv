@@ -1,0 +1,7 @@
+"term","full_estimate","sensitivity_estimate","absolute_difference","relative_difference","full_observations","sensitivity_observations","interpretation"
+"(Intercept)",-8.14484499842478,-12.4255488586452,4.28070386022039,0.525572170010391,377,334,"Conservative stress test removing the union of all diagnostic flags; not a recommendation to exclude these observations."
+"factor(dpros)2",0.772554445889551,1.65663257310253,0.884078127212982,1.14435705071248,377,334,"Conservative stress test removing the union of all diagnostic flags; not a recommendation to exclude these observations."
+"factor(dpros)3",1.55311407087765,2.51145628598823,0.958342215110583,0.617045607325568,377,334,"Conservative stress test removing the union of all diagnostic flags; not a recommendation to exclude these observations."
+"factor(dpros)4",1.42927968442823,2.41157373691975,0.982294052491517,0.687265105068972,377,334,"Conservative stress test removing the union of all diagnostic flags; not a recommendation to exclude these observations."
+"psa",0.0273364476367286,0.0487240978375479,0.0213876502008193,0.78238586392196,377,334,"Conservative stress test removing the union of all diagnostic flags; not a recommendation to exclude these observations."
+"gleason",0.995310219019833,1.48189444914841,0.486584230128573,0.488876955978362,377,334,"Conservative stress test removing the union of all diagnostic flags; not a recommendation to exclude these observations."
