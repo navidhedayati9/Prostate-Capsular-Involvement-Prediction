@@ -14,6 +14,10 @@
 data/raw/*
 !data/raw/README.md
 
+# Processed data
+data/processed/*
+!data/processed/README.md
+
 # Temporary files
 *.tmp
 *.log
