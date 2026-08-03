@@ -1,0 +1,601 @@
+"repeat_id","fold","analysis","classification","analysis_observations","analysis_events","assessment_observations","assessment_events","converged","iterations","minimum_prediction","maximum_prediction"
+1,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.020160429839435,0.969353406155133
+1,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000187625376386046,0.973563756256127
+1,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000502336110375729,0.966367628681607
+1,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0336505124310266,0.940272665018896
+1,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0421227634263766,0.937387021872916
+1,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0524440629225496,0.978211194076978
+1,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0670010111194648,0.965620594975498
+1,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0446337838482495,0.968562423432553
+1,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0434013329415933,0.963884000540772
+1,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0514185026222753,0.97641925781565
+2,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0625057750755727,0.838645044460437
+2,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0315835692641946,0.911924533565396
+2,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0537721893818181,0.967162490609812
+2,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000156966968764838,0.914746264969521
+2,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.00050281291889279,0.927391745873894
+2,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0202718620175709,0.977327228620747
+2,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0413342357180886,0.972735804039142
+2,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0231066500893645,0.974067884324729
+2,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0552841663699776,0.964349237963763
+2,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0198472063034193,0.979609436735421
+3,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0261255576192213,0.938983676589927
+3,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0360730268050022,0.91154799377471
+3,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0222229390061646,0.969850473694889
+3,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0710294271651215,0.965662130274549
+3,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000638446487987786,0.970355846108956
+3,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000108761230029677,0.97685132863041
+3,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0192589652444723,0.97372890679774
+3,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0450966103116667,0.972337291186557
+3,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0628058350861022,0.832266311394779
+3,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0411569046262091,0.956123206480279
+4,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0663423640098983,0.963213370822611
+4,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0524130290206738,0.955422633240007
+4,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0174320660087246,0.981192176432001
+4,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000753356645451487,0.965224250705967
+4,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.049701201706442,0.963515572617171
+4,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0468461624232977,0.976800471041713
+4,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,4,0.00026932747479414,0.825881239595987
+4,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0297576454840522,0.973042656711939
+4,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0262750388537759,0.845376006245414
+4,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0290869761364834,0.979045862961651
+5,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000389510627790486,0.855690197058301
+5,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0394647860504948,0.965563366364178
+5,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0439155636889991,0.957827136000301
+5,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0493261736447473,0.963658050700162
+5,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0270582882778443,0.979997575147096
+5,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0498242625386599,0.955848735004814
+5,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000276905780069974,0.92012802033726
+5,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0189361607269133,0.965681248721505
+5,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0325875421175926,0.974696973069667
+5,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.032611885374002,0.940813140434989
+6,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0419729082263394,0.952154172560042
+6,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0273641173140628,0.965472391700497
+6,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0196820695683899,0.970813495048136
+6,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0350958434788145,0.909477636850601
+6,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0467083577586629,0.937293407827788
+6,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0480366647436438,0.962256329738399
+6,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0491117975700268,0.95688622627578
+6,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,4,0.000308317006966797,0.938194877055446
+6,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0269898336959224,0.980142852114849
+6,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.000366209116958045,0.978239629385643
+7,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0651349582575388,0.950177573162556
+7,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0517949176236278,0.976489238530275
+7,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0144449793215978,0.985470273923874
+7,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000711149281594468,0.970778047979411
+7,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0289654422503414,0.966115519806499
+7,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0313230201046065,0.947533694289396
+7,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.044496458756711,0.975105378117647
+7,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,4,0.000218914342385944,0.93153039747574
+7,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0543233380607997,0.847089196345881
+7,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0393818094482982,0.918055585091586
+8,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000538389882995875,0.972371536568277
+8,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0444497190853667,0.916052759896987
+8,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0563274920055738,0.975180734706521
+8,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.037563628052785,0.872189929360941
+8,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000116770306961558,0.97211759048951
+8,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0183874544873278,0.98472027272308
+8,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0537360266846813,0.967224562338184
+8,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0182267325944069,0.955212136088047
+8,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.047224410674905,0.957134816271991
+8,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0250847193533774,0.766647497188018
+9,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0271786251494229,0.977089596680395
+9,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0583248096500146,0.96264473570172
+9,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000107626243782093,0.846831380658987
+9,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0331810708550734,0.918305759286968
+9,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.00075566609894956,0.916692991425031
+9,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0326954751361054,0.962200393831634
+9,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0448008200421954,0.950081889370507
+9,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0406229219741885,0.977009901086889
+9,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0535670925406817,0.937820963045485
+9,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0516103273891843,0.952642416110794
+10,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.054894363363291,0.966806966607955
+10,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000113575520046161,0.985997449767357
+10,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0257799460458301,0.976465227279427
+10,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0338400090557386,0.972565709312506
+10,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0377841455358051,0.939287987813678
+10,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000218961295389674,0.960267317333896
+10,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.050221346788666,0.803484569079982
+10,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0219078897324308,0.974877164250727
+10,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.047585267937083,0.935361218485699
+10,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.053001071717941,0.953767702296705
+11,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0443285722085915,0.982093761154639
+11,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.045522696240222,0.818627174126519
+11,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0266774787313156,0.974169528597204
+11,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0292350965828857,0.783558158991958
+11,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0233732204268519,0.973296896981419
+11,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0399182166355288,0.892694105570123
+11,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000614633205802644,0.960609750268113
+11,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0447672652755491,0.966852127082855
+11,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,4,0.000226264767986146,0.953536302759124
+11,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0293584362604692,0.977502052431918
+12,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0293508005102012,0.962755286468336
+12,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,4,0.000245499064442413,0.963806210578033
+12,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000588958181355566,0.974156889659445
+12,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0211880854947742,0.974851697503715
+12,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0289824984606708,0.954052483503194
+12,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0601994167068592,0.975587172432297
+12,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0444249713824764,0.92854887517759
+12,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0296173639927396,0.881192697681199
+12,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0297607769244943,0.981720388003669
+12,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.049428097659609,0.934448921477249
+13,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0301978442174781,0.972497572613873
+13,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0352130595363087,0.963050141640709
+13,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0778591117409367,0.979040165612044
+13,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000406215754747596,0.88453335642012
+13,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0489507087491376,0.967594870904093
+13,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0365272939396405,0.95089091227194
+13,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0385594430198946,0.93450772728453
+13,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.00011063524332429,0.874374111345023
+13,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0519299065738543,0.960949645203897
+13,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.030487525542718,0.859820644495132
+14,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0451361648535393,0.980885807350891
+14,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0429940425241919,0.910463686156507
+14,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0325938193937933,0.978959665684565
+14,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0208446276201623,0.961058004681698
+14,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0204817224976257,0.97508213872821
+14,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000545512515730439,0.968212651226454
+14,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.027313212384991,0.961376870386278
+14,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0316189168121231,0.969404516347727
+14,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0537041222203335,0.916908832985792
+14,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,4,0.000260376404449319,0.931611719800737
+15,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.035032149135079,0.852882425680508
+15,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.115723421041135,0.971408813829692
+15,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0300192608377368,0.979858764210838
+15,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0268080382708545,0.976966079117145
+15,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0236716209881513,0.934153988722047
+15,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0895965259546873,0.967636607319172
+15,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0354515373070084,0.955795220567286
+15,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.000534248825679816,0.931156787820326
+15,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0576056283684225,0.98152370133773
+15,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,4,0.000215054373629496,0.930528001031513
+16,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0206532099125814,0.97538950667754
+16,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000672748139205932,0.965935648535614
+16,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0367638605890079,0.828831183992141
+16,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000108483502598865,0.97105023257887
+16,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0211741528761161,0.968978784928984
+16,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0658359623180554,0.97823246528656
+16,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0469435584935072,0.928930086578294
+16,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0331550928570859,0.975167808248483
+16,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0326405255179699,0.934816106722971
+16,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.053669992042604,0.972311984862374
+17,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0303223577608337,0.977324644893579
+17,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0267824553963015,0.980847675878314
+17,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000642341713010182,0.960010626487222
+17,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0283763714147347,0.949479779803689
+17,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0469377991494411,0.944257393127264
+17,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0551773850028871,0.951544199188827
+17,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000114729938448374,0.97812667949092
+17,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.034069350658887,0.948989383021526
+17,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.030815688823115,0.932893198343019
+17,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0522843848574014,0.97950621750924
+18,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,4,0.000193538898443599,0.969503370591344
+18,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0334511067997006,0.884319831382622
+18,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0204142246742588,0.954603257838263
+18,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0358095091621341,0.980804084438751
+18,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0426562804145484,0.946759529980976
+18,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0639433129550319,0.941546814338916
+18,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0243718850252413,0.854948107277097
+18,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.000478458864906318,0.975519914668308
+18,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.042777326540334,0.966506042331648
+18,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0238678196846091,0.961265775531687
+19,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000754163342283091,0.97486030683959
+19,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0335814440451283,0.978732895582836
+19,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0599581119624412,0.850033594274391
+19,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0412173586574649,0.972908899883578
+19,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.000130961155089472,0.870573780557353
+19,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0318264797770477,0.951871659254601
+19,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0412373338734359,0.975826144909058
+19,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0405430017242092,0.949393239173916
+19,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0496991705648933,0.915948525613769
+19,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0507018158963944,0.97772995834194
+20,1,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.000256369336276867,0.943388288920488
+20,2,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.0336409006228582,0.980004756659254
+20,3,"dcaps_sensitivity","Sensitivity",341,137,39,16,TRUE,5,0.00012969209222447,0.98274451445385
+20,4,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.050000802095145,0.915447173488607
+20,5,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0306016001005799,0.965615449920298
+20,6,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0512529956424898,0.968520722110806
+20,7,"dcaps_sensitivity","Sensitivity",342,138,38,15,TRUE,5,0.0247452246015731,0.903972053753565
+20,8,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0800584025853158,0.910481941176058
+20,9,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0284014953872622,0.970004935358998
+20,10,"dcaps_sensitivity","Sensitivity",343,138,37,15,TRUE,5,0.0282836152849438,0.973351617112574
+1,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0188121458114304,0.974644892378535
+1,2,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.028462994827747,0.964129343026724
+1,3,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.0187307457419287,0.9449429980319
+1,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0314176999532391,0.905411514169516
+1,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0407273297617867,0.942722857676263
+1,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0509606012668145,0.982931906991177
+1,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0661222936065069,0.951722780208938
+1,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0431266732990727,0.957782561811436
+1,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0410098876831236,0.943659741011174
+1,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0499767071523252,0.971400349112796
+2,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,5,0.0618701043007087,0.836902870728646
+2,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0295253337663733,0.867676440596929
+2,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0527074726184769,0.973487364952895
+2,4,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0291261704966233,0.887861611135511
+2,5,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.053592947582641,0.920315517878975
+2,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0190391793145147,0.981941392301456
+2,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0393370267124033,0.963117767362593
+2,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,5,0.0223361032529922,0.965842878499058
+2,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0533658001960816,0.933927747160667
+2,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.019109485365082,0.971704549024487
+3,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0247032906665889,0.949405140907186
+3,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0348027292862594,0.881575615105863
+3,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0204054967334992,0.956894144650457
+3,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0696333012567755,0.950448685251656
+3,5,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0527460060541583,0.962587105422403
+3,6,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.052313094164393,0.976274350273253
+3,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0180240648949845,0.978957214871123
+3,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0435407644299485,0.958366273666006
+3,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0612215876638575,0.849113779960696
+3,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0399412865768187,0.927740655825635
+4,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,5,0.0658431454354136,0.93656665210815
+4,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0512908630064287,0.93737796253781
+4,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0162880316371801,0.984798508073317
+4,4,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0489693307324338,0.946059644805577
+4,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0493675048963392,0.96071142584689
+4,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0451141209191675,0.961710435120767
+4,7,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0717262658668902,0.837602234604996
+4,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0281278312434825,0.977901513747955
+4,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0252973989269013,0.862163162144099
+4,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0271636077700345,0.965616285996544
+5,1,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,5,0.0198199504147983,0.866680196099995
+5,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0384189569590779,0.956003457889994
+5,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0414517467745696,0.930563745180263
+5,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0478446986971424,0.945440538349412
+5,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0256111032337661,0.968127908272932
+5,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0488121555798374,0.961091445013061
+5,7,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.052984926677834,0.915391161385457
+5,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0176853173734646,0.952879723733499
+5,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0314876651866694,0.977509876631013
+5,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0311185451534905,0.951795876715223
+6,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0409993240025375,0.962186335487552
+6,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0257086066570582,0.946687920373764
+6,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0188551915258663,0.961890601381827
+6,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.033585367180145,0.869138841560624
+6,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0453904449231625,0.946999257127751
+6,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0460673838902101,0.946384397745244
+6,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0474486260236962,0.940231180509282
+6,8,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.03540471362348,0.902886864608446
+6,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0255324385986544,0.977476699339117
+6,10,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.0523789166110158,0.981604747633129
+7,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0637132380169009,0.954990672292145
+7,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0492179738082365,0.963694251045234
+7,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,5,0.0137914326361488,0.985041800788411
+7,4,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0339629359711812,0.959473071909924
+7,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0267222044839829,0.948374511459137
+7,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0303329657983557,0.937298051362053
+7,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.043067717185531,0.980325167509147
+7,8,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.0293032336207104,0.934619052115178
+7,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0527821394440048,0.862672494920034
+7,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.03716916591746,0.91742753293518
+8,1,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.0324174874466589,0.980185067904434
+8,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,5,0.0437433638337649,0.89662413539061
+8,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0550618433746631,0.966298385211153
+8,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0356491397142183,0.86629201556975
+8,5,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0461437816154561,0.955092731914932
+8,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,5,0.017233095134443,0.978575547560452
+8,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.051643043924009,0.973262714271661
+8,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,5,0.0171960365852198,0.958374575056778
+8,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0457784854787108,0.94681763601562
+8,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0233819579665152,0.704403819550522
+9,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0253495207988592,0.981166172093498
+9,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0572359468008555,0.941963347173459
+9,3,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,5,0.0217060290563135,0.821840672651982
+9,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0315602242661969,0.893534850233384
+9,5,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0184279972004433,0.900751688671161
+9,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0317422973232197,0.953066285384014
+9,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0429824117254354,0.95687748943098
+9,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0389779697780752,0.970192564639728
+9,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0520794468860954,0.931840170905505
+9,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0500276748297769,0.927764427769716
+10,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0536731068898618,0.972184450871675
+10,2,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,5,0.0461856574400474,0.989828825306217
+10,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0242649906833781,0.96532375145725
+10,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0321503220329476,0.963997571061275
+10,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0360178345754072,0.94731422466594
+10,6,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,5,0.0429207648986082,0.965580318009975
+10,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0489723781417012,0.773065809804024
+10,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0196683660368642,0.953127557785091
+10,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0463178518348887,0.915641816456991
+10,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0513623724662509,0.950646076554018
+11,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0416422993210719,0.986523116783777
+11,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0434178594869693,0.839435236043773
+11,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0255883636929988,0.963984644344885
+11,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0281194097273205,0.795072318974824
+11,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0217512535547855,0.977849379436824
+11,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0385337091222016,0.902335820446898
+11,7,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0230505691901351,0.950297042689564
+11,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0433122781866953,0.954160579594919
+11,9,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.0305148600393815,0.937488398420921
+11,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.028220896119413,0.966304571398683
+12,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0271967959311617,0.969926692431013
+12,2,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.052683029367358,0.945380371420463
+12,3,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.0893753669740093,0.967891306986248
+12,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0196066299391279,0.956368045964107
+12,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0277097869057831,0.935376304685945
+12,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0593568898015685,0.9662946437154
+12,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.043484102741169,0.905814807968653
+12,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0279883366746828,0.896064898580786
+12,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,5,0.0285942374983678,0.984762209664095
+12,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0471500651504585,0.946345166831101
+13,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0288486212764369,0.958764429431681
+13,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0335365783938705,0.967495878875807
+13,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0771137531023227,0.978931856551597
+13,4,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.027236327197608,0.899067811898119
+13,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.046846200194075,0.952919402151064
+13,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0351704894405427,0.955249892780734
+13,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0368717046643507,0.946968156169722
+13,8,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.0164874871017394,0.887408993145759
+13,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0512900383318082,0.952755538358197
+13,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,5,0.0292067260943708,0.878260652018452
+14,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.043433931219856,0.971017881945901
+14,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,5,0.0413237180247929,0.921018256979359
+14,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0315163088297089,0.982384446848631
+14,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,5,0.0199912244037109,0.949994245835887
+14,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0190456314010047,0.965343212670535
+14,6,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0542385724745027,0.958141802973879
+14,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.025606938055053,0.941327571064943
+14,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0299325210469602,0.97464460118316
+14,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0517885137207842,0.882341726032491
+14,10,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.0612055214865238,0.896526206529844
+15,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0340019472640008,0.782254240698035
+15,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,5,0.114716803690019,0.960826605998848
+15,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0285576760017946,0.972249179674535
+15,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0255409279938014,0.98089593671284
+15,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.022432347237123,0.94611283181345
+15,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0879904394576176,0.950327382583565
+15,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0330116639278433,0.936991363405855
+15,8,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.0293683772816403,0.899750679645246
+15,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.056273062724481,0.972627006022469
+15,10,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.0506792047660302,0.905226368828312
+16,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0193796996595464,0.967489709293897
+16,2,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.0333847189195551,0.950130180985047
+16,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,5,0.0354763708806457,0.802280819080269
+16,4,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0547687147423654,0.96036112601467
+16,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0196798005883788,0.951852177966946
+16,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0636274105858242,0.98154066296616
+16,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0458411590901001,0.937802656344011
+16,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0308957994922212,0.960396026638825
+16,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0310748369746341,0.888802803207906
+16,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0525900695698121,0.976911851820089
+17,1,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0292793546965862,0.967203831535778
+17,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0243500592029775,0.985617269097607
+17,3,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.0166986570198189,0.940666456971793
+17,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0277608599842867,0.954086336670577
+17,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.045720651026191,0.912013748550452
+17,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0535028183278181,0.933506550520276
+17,7,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.035995003300266,0.981472069178892
+17,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0330301231010079,0.927477741581778
+17,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0293439303679801,0.918653928030461
+17,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0512385380796274,0.970286357778547
+18,1,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.0720966100433566,0.975824273085923
+18,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0314264274630692,0.898202437645742
+18,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0193742433739846,0.963087555842131
+18,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0339088585114474,0.968053950795474
+18,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,5,0.0410311309967793,0.919595805239253
+18,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0630122019797143,0.915160827550017
+18,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0233770819280878,0.862016062612891
+18,8,"zero_gleason_exclusion","Data-quality sensitivity",342,138,36,15,TRUE,4,0.0673950391906203,0.980058315222583
+18,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0420837935251953,0.950752558293701
+18,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0225618602168665,0.949467445285971
+19,1,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.0144108435390566,0.964598096322124
+19,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0317203644695168,0.96553639640191
+19,3,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0591628961299944,0.836124059231436
+19,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,5,0.0399343082130915,0.961009588020468
+19,5,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.054536403745972,0.878154052777898
+19,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.030973405663843,0.933175686414454
+19,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0386647202001544,0.980402529931251
+19,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,5,0.0391289271981164,0.894935142189662
+19,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0472371125706802,0.91572912459018
+19,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.049777033728463,0.980884767998004
+20,1,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,5,0.0296552838296396,0.949924993259783
+20,2,"zero_gleason_exclusion","Data-quality sensitivity",339,137,39,16,TRUE,4,0.0317737113518742,0.983788274592255
+20,3,"zero_gleason_exclusion","Data-quality sensitivity",340,137,38,16,TRUE,4,0.0184701893110165,0.985290137604659
+20,4,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.048938994706296,0.893952323289137
+20,5,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.029088094524659,0.957513393817528
+20,6,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0489495157854544,0.945329412211136
+20,7,"zero_gleason_exclusion","Data-quality sensitivity",340,138,38,15,TRUE,4,0.0227333382826356,0.887996269399286
+20,8,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0794085432299681,0.872741589826025
+20,9,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.0278379011682751,0.964290405930818
+20,10,"zero_gleason_exclusion","Data-quality sensitivity",341,138,37,15,TRUE,4,0.026739330632078,0.956169492089862
+1,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.024581790431407,0.969023819401632
+1,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000195964453695186,0.957382431672179
+1,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000586224635234727,0.960498256324567
+1,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0394420401150759,0.930937010978299
+1,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0259845975294806,0.958425481866553
+1,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0389348171541595,0.977614718167576
+1,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0504118156877209,0.938615151386536
+1,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0302305601684937,0.967052426417072
+1,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0322396129852799,0.934156212515603
+1,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0445359165568907,0.961402932835966
+2,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0499769799112727,0.878924867152607
+2,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0229624271034211,0.900449636868351
+2,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0639163954193617,0.967740108465275
+2,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.00017369424519768,0.867846258648973
+2,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000621286440247352,0.939946803757329
+2,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0280436016115868,0.974132513363618
+2,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0518423189201377,0.951378172675949
+2,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0166257841498028,0.977393764048745
+2,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.039453851812262,0.953397342422901
+2,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0157928087394114,0.965245052289495
+3,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.029160446434731,0.940077096179018
+3,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0283995947912829,0.908941390780715
+3,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0140676427231029,0.97165283454495
+3,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0635617104143633,0.939978374592566
+3,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000798660297125493,0.953223817749183
+3,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000125161046514187,0.967835787946337
+3,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0244148026426004,0.97357521401184
+3,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0514704187561108,0.962089651927967
+3,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0490077898134112,0.859230124716835
+3,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0291934567856983,0.95266343361065
+4,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0848018674316473,0.951068013746338
+4,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0397665900330149,0.92112176901401
+4,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0224153696778906,0.980249521097819
+4,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000869132629268683,0.963753151560431
+4,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0395826546944523,0.969545236852855
+4,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0364085031245105,0.951291895883072
+4,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000315333640564988,0.878302477817108
+4,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0368311094227055,0.973148446888072
+4,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0193756947717396,0.889734052662697
+4,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0207314531722073,0.954163841376301
+5,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000543817669302657,0.915645829070682
+5,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0299111210774147,0.966724432928172
+5,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.030120075982619,0.945876439099555
+5,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0376866273059474,0.927839982490965
+5,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0192168151671883,0.958921205820913
+5,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0416954902480126,0.956490356942648
+5,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,4,0.000264633045146507,0.928618933684437
+5,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0233698305320365,0.963667609930325
+5,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0454143284721309,0.972067772484253
+5,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0406365486245339,0.939150483412455
+6,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0338123960883505,0.954766314526059
+6,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0193101194812674,0.934335452925152
+6,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0247800376461073,0.953112878402197
+6,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0387997624347646,0.844672503517659
+6,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0359251231253936,0.928334772983985
+6,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0358200185913625,0.961554264149196
+6,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0374042538644283,0.958022547229915
+6,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,4,0.000326357128877024,0.923879555876443
+6,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0197062783784816,0.969530773308495
+6,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.000442236260569616,0.977452748406189
+7,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0572315749294823,0.942952851314076
+7,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0377482783018343,0.952343171392555
+7,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0171025770147179,0.982396036855316
+7,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000837514737177334,0.946546526981865
+7,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0186796769348544,0.939553106058662
+7,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0396499883505076,0.952894801298575
+7,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0288520133501742,0.974217974242558
+7,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.000229958404831486,0.94875197349179
+7,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0413630691429564,0.881342615908614
+7,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0187772317537341,0.940446124288252
+8,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000615740064359264,0.972649539536876
+8,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.063951118450648,0.886981511988192
+8,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0436498451068501,0.956806719835617
+8,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0390139785228498,0.907997132773187
+8,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000136200039904932,0.935157092715047
+8,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0219977481771779,0.974246083447614
+8,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0385578392743426,0.967323558874673
+8,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0133801490371696,0.951785042146601
+8,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0398919046551834,0.949887520929676
+8,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0309308586430284,0.681970749705051
+9,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0182785041886366,0.978980848660903
+9,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0498034271204702,0.956101299400694
+9,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000115894394665619,0.858925110648878
+9,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0374242795267855,0.904657189471384
+9,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000908278858885272,0.860228454101369
+9,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0352581976788533,0.949874175973372
+9,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0330596330907516,0.945617613229826
+9,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.03227859714567,0.962807097695338
+9,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.06570498297515,0.946692913403165
+9,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0392984191465998,0.946234522537656
+10,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.039885592415881,0.965199438255193
+10,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000118620503792561,0.986160829578385
+10,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0198433584070326,0.952415713408309
+10,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0241679654577965,0.957672216136074
+10,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0266717331092523,0.962211665922878
+10,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000263999442856165,0.957718223665524
+10,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.038254265936922,0.804905621758588
+10,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0280437063227133,0.967117723827858
+10,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0427483900112386,0.907556232703955
+10,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0361870195375906,0.932417619030797
+11,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0351608158208601,0.983496790702314
+11,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0340164965674273,0.887350815494978
+11,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0362163060395877,0.955778050613122
+11,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0385380098535452,0.852086238823614
+11,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0299027750696088,0.973438473949385
+11,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.028355265410048,0.933179550274885
+11,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000728436082962274,0.943484669560098
+11,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0345857060374694,0.941810934543435
+11,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.000243056648887423,0.953277205716982
+11,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0376610587147296,0.960530856650363
+12,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0216061024901004,0.962987984133261
+12,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000259999246213799,0.962579398652865
+12,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000732676561548769,0.953755192949546
+12,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0245795582560226,0.944463290615237
+12,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0234902010980708,0.948139966134322
+12,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0454475015541139,0.95775156862469
+12,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0370805820549144,0.927928863156501
+12,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0206903820523231,0.910789720459371
+12,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0251562931297601,0.981661339594148
+12,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0358203942591959,0.961079403760873
+13,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0368477582532474,0.949325644087169
+13,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0278832789582085,0.955707072603191
+13,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0621175119563802,0.972252721047574
+13,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000479012799822632,0.873554421781595
+13,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0438535420515048,0.963110688460078
+13,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0407735715262013,0.950643764990381
+13,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0287999950092862,0.933537964459856
+13,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.000120864877519035,0.921573338323653
+13,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.038071031944288,0.960227418681759
+13,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0228756151754296,0.899817817144542
+14,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.036388451564001,0.964528643420005
+14,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0300036980309534,0.932510836011676
+14,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0238290777941525,0.977394171857163
+14,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0286615220596632,0.948244700885694
+14,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0264285544759204,0.955795176437797
+14,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000650147796783223,0.968990191283809
+14,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0191261455115511,0.958199803470569
+14,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0369247393559071,0.971529630720593
+14,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0381499294230033,0.913098903575254
+14,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.000307308185386324,0.921662729324199
+15,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0258712818042168,0.8383937510636
+15,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0834153554177301,0.953756333504236
+15,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0309057707750771,0.96815043297213
+15,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0336041754030696,0.975272909025039
+15,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.028455674985262,0.945075706423789
+15,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0689567273513041,0.964000754167301
+15,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0242440442445339,0.922779646755952
+15,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.000684371488136689,0.917949987155859
+15,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0444914383918962,0.965166976603527
+15,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.000223813386037812,0.923531216594651
+16,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.029111076553824,0.956189185809386
+16,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000755463601165359,0.960132583192484
+16,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0304844303231953,0.815581176242068
+16,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0001246176326259,0.948776884410922
+16,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0159810521042856,0.963818356830612
+16,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0470142524018818,0.976488034679419
+16,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.039392886010056,0.950938598005934
+16,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0400681187003245,0.951795141210566
+16,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0291279119712214,0.914988953376869
+16,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0377039617870818,0.96904202588134
+17,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0388703663527768,0.957442121957581
+17,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0188150426056067,0.98201562790088
+17,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000789874597506417,0.953040840095617
+17,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0247261320809932,0.9486759689932
+17,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0338099103287244,0.931591923392497
+17,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0473222177458931,0.917078322550412
+17,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.00012975596290239,0.975543039672731
+17,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.028269063876996,0.941476977625629
+17,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0337213156605582,0.940907227147956
+17,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0562992549124065,0.965497590613397
+18,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000223532869267866,0.967643620965996
+18,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0346673179267258,0.856126258988222
+18,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0257890648488185,0.955553502632396
+18,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0275793849651283,0.95943388993667
+18,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0534724724125484,0.936955661776931
+18,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0565940908461066,0.935965401293562
+18,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0302128808088372,0.875078618595548
+18,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.000546266224711299,0.975616442202038
+18,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.031496234515741,0.965674991681125
+18,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0174198070065312,0.962668652517322
+19,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000950068328816315,0.951638316908128
+19,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0423386370449173,0.955569992332076
+19,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0412748749756642,0.876016494198954
+19,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0291909922143764,0.973864790815793
+19,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.000161116292518076,0.882351419444424
+19,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0240668577009457,0.916457208986268
+19,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0253706047821654,0.975316718622317
+19,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.03384331586888,0.9117902153004
+19,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0335315166265127,0.939921410686491
+19,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.037710305531771,0.974795367190773
+20,1,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000308981024876711,0.962601828166406
+20,2,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.0201586480922757,0.979676838823193
+20,3,"volume_exploratory","Exploratory",341,137,39,16,TRUE,5,0.000143851793650209,0.982129149965484
+20,4,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0401292559523611,0.930760351404655
+20,5,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0382541730104462,0.945825652959664
+20,6,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0412405887024147,0.952341125320548
+20,7,"volume_exploratory","Exploratory",342,138,38,15,TRUE,5,0.0169437675355719,0.923291255717322
+20,8,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0865900147479115,0.877781525256031
+20,9,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0206831968977738,0.948622701497012
+20,10,"volume_exploratory","Exploratory",343,138,37,15,TRUE,5,0.0320124511622683,0.962867997387264

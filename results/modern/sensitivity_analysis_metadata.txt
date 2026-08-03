@@ -1,0 +1,18 @@
+Sensitivity and exploratory analyses
+Run date: 2026-08-03
+R version: R version 4.6.1 (2026-06-24)
+Input: data/processed/prostate_modern.rds
+Input MD5: 1886b83414d688a3c277fb7b4a869fdc
+Saved assignments: results/modern/resampling_assignments.csv
+Resampling: reused primary outcome-stratified 10-fold assignments across 20 repeats
+dcaps sensitivity: capsule ~ age + factor(dpros) + log2(psa) + gleason + factor(dcaps)
+Zero-Gleason sensitivity: capsule ~ age + factor(dpros) + log2(psa) + gleason
+Zero-Gleason exclusions: IDs 282 and 357
+Volume exploratory: capsule ~ age + factor(dpros) + log2(psa) + gleason + vol_positive +      log2_vol_positive
+Volume representation: indicator(vol > 0) plus log2(vol) among positive values
+Performance: ROC AUC, Brier score, log loss, calibration intercept, calibration slope
+Primary estimates: repeat-level out-of-fold performance
+Positive preferred_improvement favors the sensitivity or exploratory analysis
+Percentile ranges describe resampling variability, not confidence intervals
+Full-data performance and the volume prediction curve are apparent and secondary
+The primary modern model remains the prespecified main analysis
