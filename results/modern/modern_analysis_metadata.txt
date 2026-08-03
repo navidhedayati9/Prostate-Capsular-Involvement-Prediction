@@ -1,0 +1,17 @@
+Primary modern analysis
+Run date: 2026-08-03
+R version: R version 4.6.1 (2026-06-24)
+Input: data/processed/prostate_modern.rds
+Input MD5: 1886b83414d688a3c277fb7b4a869fdc
+Random seed: 20260803
+Folds: 10
+Repeats: 20
+Resampling: outcome-stratified repeated 10-fold cross-validation
+Historical benchmark: capsule ~ factor(dpros) + psa + gleason
+Primary modern: capsule ~ age + factor(dpros) + log2(psa) + gleason
+Nonlinear PSA: capsule ~ age + factor(dpros) + splines::ns(log2(psa), df = 3) +      gleason
+Performance: ROC AUC, Brier score, log loss, calibration intercept, calibration slope
+Primary estimates: repeat-level out-of-fold performance
+Percentile ranges describe resampling variability, not confidence intervals
+Full-data performance is apparent and secondary
+Sensitivity and exploratory analyses are excluded from this script
