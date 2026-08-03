@@ -6,111 +6,295 @@
 
 This project reproduces and extends a logistic regression analysis originally completed in 2018 for STAT 696: Statistical Communication in Data Science at San Diego State University.
 
-The original analysis examined whether baseline clinical measurements could predict whether a prostate tumor had penetrated the prostatic capsule. It identified digital rectal examination findings, prostate-specific antigen (PSA), and Gleason score as important predictors.
+The study examines whether baseline clinical measurements can predict prostatic capsule penetration among patients diagnosed with prostate cancer.
 
-The present project will first reproduce the 2018 analysis and verify its reported results. It will then apply a modern, reproducible modeling workflow that evaluates out-of-sample predictive performance, calibration, and model stability.
+The project has two principal components:
 
-## Central research question
+1. a faithful reproduction of the 2018 analysis; and
+2. a prespecified modern extension emphasizing out-of-sample prediction, calibration, model stability, and reproducibility.
+
+The modern extension follows a documented analysis plan created before model fitting. It uses repeated cross-validation and compares a limited set of interpretable logistic regression models.
+
+## Research question
 
 > How accurately can baseline clinical measurements predict prostatic capsule penetration among patients diagnosed with prostate cancer?
 
-## Secondary research questions
+### Secondary questions
 
-1. How does including the baseline assessment of capsular involvement (`dcaps`) affect predictive performance?
-2. Does including ultrasound-derived tumor volume (`vol`) provide additional predictive information?
+1. How does including baseline detection of capsular involvement (`dcaps`) affect predictive performance?
+2. Does ultrasound-derived tumor volume (`vol`) provide additional predictive information?
 
-The `dcaps` analysis is prespecified as a sensitivity analysis because this measurement directly assesses possible capsular involvement during the baseline rectal examination.
+The `dcaps` analysis is treated as a sensitivity analysis because the measurement directly assesses possible capsular involvement during the baseline rectal examination.
 
-Tumor volume is treated as a secondary exploratory analysis because it is present in the canonical dataset but was not included in the dataset used for the 2018 SDSU project.
+Tumor volume is treated as a secondary exploratory analysis because it was present in the canonical public dataset but not in the dataset used for the 2018 SDSU project.
 
-## Objectives
+## Project objectives
 
 1. Reproduce and verify the 2018 logistic regression analysis.
 2. Develop a fully documented and reproducible R workflow.
-3. Estimate predictive performance using appropriate resampling methods.
-4. Evaluate both model discrimination and calibration.
+3. Estimate predictive performance using repeated cross-validation.
+4. Evaluate discrimination, calibration, and overall predictive error.
 5. Compare the historical model with a limited number of interpretable modern alternatives.
-6. Assess the effect of including `dcaps` in a sensitivity analysis.
-7. Explore the additional predictive value of `vol`.
-
-## Historical context
-
-The original report was completed by Navid Hedayati in 2018 as part of STAT 696 at San Diego State University.
-
-The historical analysis used an eight-variable version of the Prostate Cancer Study dataset and selected a logistic regression model containing digital rectal examination findings (`dpros`), PSA, and Gleason score.
-
-The original report will be retained as a historical artifact. The reproduction will distinguish between:
-
-- results reported in 2018,
-- results obtained by faithfully reproducing the original workflow,
-- corrections or discrepancies identified during reproduction, and
-- results from the modern extension.
-
-The original work may be referenced as:
-
-> Hedayati, N. (2018). *Detection of Prostate Cancer: Data Analysis Report 2*. Unpublished course report, STAT 696, San Diego State University.
+6. Assess the effect of including `dcaps`.
+7. Examine the stability of results after excluding two unusual zero Gleason scores.
+8. Explore the additional predictive value of ultrasound-derived tumor volume.
 
 ## Data source
 
 The project uses the Prostate Cancer Study dataset described by Hosmer and Lemeshow in *Applied Logistic Regression*.
 
-The data were collected by Dr. Donn Young at The Ohio State University Comprehensive Cancer Center. The published values were modified to protect patient confidentiality.
+The data were collected by Dr. Donn Young at The Ohio State University Comprehensive Cancer Center. Published values were modified to protect patient confidentiality.
 
-The canonical dataset contains 380 observations and nine variables:
+The canonical dataset is publicly distributed as `PCS` in the R package `lbreg`. It contains 380 observations and nine variables:
 
-- `id`: record identification code
-- `tumor`: tumor penetration of the prostatic capsule
-- `age`: age in years
-- `race`: recorded race category
-- `dpros`: digital rectal examination result
-- `dcaps`: detection of capsular involvement during the rectal examination
-- `psa`: prostate-specific antigen value
-- `vol`: tumor volume obtained by ultrasound
-- `gleason`: total Gleason score
+| Variable | Meaning |
+|---|---|
+| `id` | Record identification code |
+| `tumor` | Tumor penetration of the prostatic capsule |
+| `age` | Age in years |
+| `race` | Recorded race category |
+| `dpros` | Digital rectal examination result |
+| `dcaps` | Detection of capsular involvement during rectal examination |
+| `psa` | Prostate-specific antigen |
+| `vol` | Tumor volume obtained by ultrasound |
+| `gleason` | Total Gleason score |
 
-The canonical data are publicly distributed as the `PCS` dataset in the R package `lbreg`.
+During reproducible acquisition, `tumor` is renamed to `capsule`.
 
-The eight-variable SDSU dataset is an exact subset of the canonical data after:
+The eight-variable SDSU dataset is an exact subset of the canonical dataset after:
 
-1. renaming `tumor` to `capsule`, and
+1. renaming `tumor` to `capsule`; and
 2. excluding `vol`.
 
-All remaining values, observation order, and missing-value locations match exactly.
+All remaining values, observation order, and missing-value locations match the public dataset.
 
-### Reference
+Generated data files are not committed to Git. They are recreated from the documented public source by `R/01_acquire_data.R`.
 
-Hosmer, D. W., & Lemeshow, S. (2000). *Applied Logistic Regression* (2nd ed.). John Wiley & Sons.
+## Historical reproduction
 
-## Analysis design
+The historical reproduction used the same eight-variable structure available in 2018 and preserved the original complete-case population of 377 observations.
 
-The project separates the analysis into three related components.
+The central numerical results were highly reproducible:
 
-### 1. Historical reproduction
+- dataset counts and missing-value locations matched;
+- descriptive statistics matched;
+- principal univariate conclusions matched;
+- all six final-model coefficients reproduced;
+- all coefficient confidence intervals reproduced;
+- all odds ratios and odds-ratio confidence intervals reproduced; and
+- the reported final-model AIC of 393.22 reproduced.
 
-The historical reproduction will use the same eight variables available in the 2018 SDSU project. It will preserve the original complete-case approach where necessary so that the reproduced estimates can be compared fairly with the reported results.
+Two important qualifications were identified.
 
-### 2. Modern primary analysis
+### Corrected p-value
 
-The primary modern analysis will:
+The 2018 report listed a p-value of `0.31` for `dpros = 2`. The reproduced model gives:
 
-- use `capsule` as the binary outcome,
-- exclude `id` from all predictive models,
-- use predictors available in the 2018 analysis,
-- exclude `dcaps` from the primary model comparison,
-- use model-appropriate missing-data handling,
-- estimate performance using resampling, and
-- evaluate both discrimination and calibration.
+```text
+p = 0.02997
+```
 
-Decisions about transformations of PSA and representation of Gleason score will be documented before model fitting.
+Because the corresponding coefficient, standard error, confidence interval, and odds ratio all reproduce, the reported value is almost certainly a typographical error.
 
-### 3. Sensitivity and exploratory analyses
+### Model-selection ambiguity
 
-Two additional analyses are planned:
+The reproduced bidirectional stepwise procedure selected:
 
-- a prespecified sensitivity analysis that includes `dcaps`, and
-- a secondary exploratory analysis that includes ultrasound tumor volume (`vol`).
+```r
+capsule ~ dpros + psa + gleason + dpros:psa
+```
 
-These results will be reported separately from the primary model comparison.
+The final model reported in 2018 was:
+
+```r
+capsule ~ factor(dpros) + psa + gleason
+```
+
+The available historical materials do not document why the interaction was removed or why `dpros` was changed from a numeric term to a categorical factor. The final model is reproducible, but it is not the direct result of the documented stepwise procedure.
+
+Detailed historical findings are available in:
+
+- [Historical reproduction plan](report/historical-reproduction-plan.md)
+- [Historical reproduction findings](report/historical-reproduction-findings.md)
+
+## Modern analysis
+
+The modern analysis used all 380 observations and compared three prespecified models.
+
+### Historical benchmark
+
+```r
+capsule ~ factor(dpros) + psa + gleason
+```
+
+### Primary modern model
+
+```r
+capsule ~ age + factor(dpros) + log2(psa) + gleason
+```
+
+### Nonlinear PSA model
+
+```r
+capsule ~ age +
+  factor(dpros) +
+  splines::ns(log2(psa), df = 3) +
+  gleason
+```
+
+Predictive performance was estimated using outcome-stratified 10-fold cross-validation repeated 20 times. Every model used the same saved resampling assignments.
+
+### Cross-validated performance
+
+| Model | ROC AUC | Brier score | Log loss | Calibration intercept | Calibration slope |
+|---|---:|---:|---:|---:|---:|
+| Historical benchmark | 0.809 | 0.17315 | 0.51878 | −0.002 | 0.920 |
+| Primary modern | 0.810 | 0.17310 | 0.51925 | −0.003 | 0.914 |
+| Nonlinear PSA | 0.805 | 0.17461 | 0.52266 | −0.003 | 0.884 |
+
+The historical benchmark and primary modern model performed almost identically. The modern model did not materially outperform the simpler historical benchmark.
+
+The nonlinear PSA model increased complexity and prediction instability without improving out-of-sample performance.
+
+Calibration intercepts were close to zero, while calibration slopes below one indicated modest overfitting. Overfitting was greatest for the nonlinear model.
+
+## Sensitivity and exploratory findings
+
+### Adding `dcaps`
+
+Adding `dcaps` did not provide meaningful or stable incremental predictive value. Small improvements in some metrics were offset by slightly worse log loss and calibration slope.
+
+### Excluding zero Gleason scores
+
+The dataset contains two records with Gleason score equal to zero. Excluding these records produced essentially no change in discrimination, prediction error, calibration, or fitted coefficients.
+
+The primary conclusions are not sensitive to these two observations.
+
+### Adding tumor volume
+
+The exploratory volume model used a two-part representation:
+
+1. an indicator distinguishing zero from positive recorded volume; and
+2. `log2(volume)` among positive values.
+
+The model produced small average improvements in AUC, Brier score, and log loss but worse calibration slope. The fitted relationship was nearly flat among positive volumes, and the meaning of the 167 recorded zero values is uncertain.
+
+The tumor-volume findings are therefore inconclusive and remain exploratory.
+
+Detailed modern results are available in:
+
+- [Modern analysis plan](report/modern-analysis-plan.md)
+- [Sample-size and model-complexity assessment](report/sample-size-assessment.md)
+- [Modern analysis findings](report/modern-analysis-findings.md)
+
+## Main conclusion
+
+Digital rectal examination findings, PSA, and Gleason score contain meaningful predictive information about prostatic capsule penetration in this historical dataset.
+
+However, the analysis does not show that a more complicated model predicts better. The historical benchmark and prespecified primary modern model performed essentially equally, while nonlinear PSA modeling performed somewhat worse.
+
+The results favor a parsimonious and interpretable logistic regression model.
+
+The reported performance represents internal validation only. The models have not been externally validated and should not be considered contemporary clinical prediction tools.
+
+## Reproducing the analysis
+
+### Requirements
+
+- R
+- the package versions recorded in `renv.lock`
+- internet access during initial package restoration and data acquisition
+
+Clone the repository and open the R project:
+
+```text
+prostatic-capsular-penetration.Rproj
+```
+
+Restore the recorded package environment:
+
+```r
+renv::restore()
+```
+
+Run the scripts from the project root in numerical order:
+
+```r
+source("R/01_acquire_data.R")
+source("R/02_reproduce_2018.R")
+source("R/03_validate_inputs.R")
+source("R/04_modern_analysis.R")
+source("R/05_sensitivity_analyses.R")
+```
+
+Alternatively, the scripts can be run non-interactively:
+
+```sh
+Rscript --vanilla R/01_acquire_data.R
+Rscript --vanilla R/02_reproduce_2018.R
+Rscript --vanilla R/03_validate_inputs.R
+Rscript --vanilla R/04_modern_analysis.R
+Rscript --vanilla R/05_sensitivity_analyses.R
+```
+
+The workflow will stop if expected files, dataset structure, values, transformations, resampling assignments, or model outputs fail validation.
+
+## Repository structure
+
+```text
+.
+├── R/
+│   ├── 01_acquire_data.R
+│   ├── 02_reproduce_2018.R
+│   ├── 03_validate_inputs.R
+│   ├── 04_modern_analysis.R
+│   └── 05_sensitivity_analyses.R
+├── data/
+│   ├── raw/
+│   │   └── README.md
+│   └── processed/
+│       └── README.md
+├── figures/
+│   ├── historical/
+│   └── modern/
+├── report/
+│   ├── historical-reproduction-plan.md
+│   ├── historical-reproduction-findings.md
+│   ├── modern-analysis-plan.md
+│   ├── sample-size-assessment.md
+│   └── modern-analysis-findings.md
+├── results/
+│   ├── historical/
+│   └── modern/
+├── renv/
+├── renv.lock
+└── prostatic-capsular-penetration.Rproj
+```
+
+## Reproducibility design
+
+The project separates the workflow into documented stages:
+
+1. public data acquisition;
+2. historical reproduction;
+3. modern input validation;
+4. primary modern analysis; and
+5. sensitivity and exploratory analyses.
+
+Additional reproducibility features include:
+
+- generated data excluded from version control;
+- source and transformation checks;
+- stored dataset checksums;
+- explicit input-validation results;
+- fixed and recorded random seed;
+- saved resampling assignments;
+- identical folds for model comparisons;
+- preprocessing performed within resampling where required;
+- machine-readable predictions and performance estimates;
+- scripted, non-interactive figures;
+- deterministic repeated runs; and
+- package versions recorded through `renv`.
 
 ## Scope and limitations
 
@@ -118,35 +302,61 @@ This study evaluates prediction of prostatic capsule penetration among patients 
 
 It does not evaluate:
 
-- prostate cancer screening,
-- initial prostate cancer diagnosis,
-- treatment selection,
-- patient prognosis,
-- cancer-specific mortality, or
-- clinical deployment of a prediction tool.
+- prostate cancer screening;
+- initial prostate cancer diagnosis;
+- treatment selection;
+- prognosis;
+- cancer-specific mortality;
+- fairness across contemporary populations;
+- external validity;
+- clinical utility; or
+- deployment of a prediction tool.
 
-The dataset is historical, contains a relatively small sample from a single clinical setting, and records race using only two categories. These limitations restrict the generalizability of any results.
+The dataset is historical, relatively small, and derived from a single clinical setting. Published values were modified for confidentiality. Race is recorded using only two categories, and the meaning of zero tumor-volume values is uncertain.
 
-This repository is intended for statistical education and methodological demonstration. It is not a medical device and must not be used to make clinical decisions.
+These limitations restrict generalizability and prevent responsible clinical deployment.
 
-## Reproducibility
+## Clinical-use limitation
 
-The analysis will be developed as a reproducible R project. Data preparation, historical reproduction, modern modeling, evaluation, and reporting will be separated into documented stages.
+This repository is intended for statistical education and methodological demonstration.
 
-Package versions and computational requirements will be recorded as the project develops.
+It is not a medical device and must not be used to make clinical decisions.
+
+## Historical context and suggested citation
+
+The original report was completed by Navid Hedayati in 2018 as part of STAT 696 at San Diego State University.
+
+The historical work may be cited as:
+
+> Hedayati, N. (2018). *Detection of Prostate Cancer: Data Analysis Report 2*. Unpublished course report, STAT 696, San Diego State University.
+
+## References
+
+Hosmer, D. W., & Lemeshow, S. (2000). *Applied Logistic Regression* (2nd ed.). John Wiley & Sons.
+
+Collins, G. S., Moons, K. G. M., Dhiman, P., et al. (2024). TRIPOD+AI statement: Updated guidance for reporting clinical prediction models that use regression or machine learning methods. *BMJ*, 385, e078378. <https://doi.org/10.1136/bmj-2023-078378>
+
+Moons, K. G. M., Damen, J. A. A., Kaul, T., et al. (2025). PROBAST+AI: An updated quality, risk of bias, and applicability assessment tool for prediction models using regression or artificial intelligence methods. *BMJ*, 388, e082505. <https://doi.org/10.1136/bmj-2024-082505>
+
+Riley, R. D., Snell, K. I. E., Ensor, J., et al. (2019). Minimum sample size for developing a multivariable prediction model: Part II—binary and time-to-event outcomes. *Statistics in Medicine*, 38, 1276–1296. <https://doi.org/10.1002/sim.7992>
 
 ## Project status
 
-This project is being developed collaboratively and incrementally.
+Completed:
 
-Current decisions completed:
+- historical data-source verification;
+- reproducible data acquisition;
+- historical reproduction plan;
+- historical reproduction analysis;
+- historical findings document;
+- modern analysis plan;
+- formal sample-size and model-complexity assessment;
+- modern input validation;
+- repeated cross-validation analysis;
+- sensitivity and exploratory analyses; and
+- modern findings document.
 
-- project title
-- central and secondary research questions
-- project objectives
-- report structure
-- dataset provenance investigation
-- comparison of the public and SDSU datasets
-- initial data and analysis specification
+Remaining:
 
-Analysis code and results have not yet been produced.
+- assemble the integrated final project report; and
+- perform final repository review before public release.
