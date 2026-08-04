@@ -757,12 +757,11 @@ Riley, R. D., Snell, K. I. E., Ensor, J., et al. (2019). Minimum sample size for
 
 # Supplementary Material {.unnumbered}
 
-<!--
-Keep this section minimal. Include or link full coefficients, repeat-level
-ranges, sensitivity details, and the exploratory volume figure.
--->
+The supplementary materials provide technical detail and machine-readable results supporting the integrated report. They are retained separately to avoid duplicating the main narrative.
 
 ## Technical documentation
+
+The analytical decisions, implementation specifications, and detailed findings are documented in:
 
 - [Historical reproduction plan](historical-reproduction-plan.md)
 - [Historical reproduction findings](historical-reproduction-findings.md)
@@ -770,6 +769,38 @@ ranges, sensitivity details, and the exploratory volume figure.
 - [Sample-size and model-complexity assessment](sample-size-assessment.md)
 - [Modern analysis findings](modern-analysis-findings.md)
 
+## Machine-readable results
+
+Historical reproduction outputs are stored under `results/historical/`. These include dataset counts, descriptive statistics, univariate tests, model-selection results, final-model estimates, diagnostic summaries, and reported-versus-reproduced comparisons.
+
+Modern analysis outputs are stored under `results/modern/`. Principal files include:
+
+- `performance_summary.csv`: cross-validated performance summaries for the three primary comparison models;
+- `resampling_performance.csv`: performance estimates for every model and resampling repeat;
+- `paired_metric_differences.csv`: paired repeat-level comparisons between primary models;
+- `out_of_fold_predictions.csv`: observation-level out-of-fold predictions;
+- `mean_out_of_fold_predictions.csv`: prediction means and variability across repeats;
+- `full_model_coefficients.csv`: full-data coefficient estimates;
+- `resampling_assignments.csv`: the saved cross-validation folds;
+- `resampling_diagnostics.csv`: convergence and prediction checks;
+- `sensitivity_performance_summary.csv`: performance summaries for sensitivity and exploratory models;
+- `sensitivity_paired_differences.csv`: paired comparisons with the applicable primary-model reference; and
+- `sensitivity_full_model_coefficients.csv`: coefficients from the full-data sensitivity and exploratory models.
+
+The percentile ranges in these files describe variability across correlated cross-validation repeats. They are not formal confidence intervals.
+
+## Figures
+
+Historical figures are stored under `figures/historical/`, and modern prediction figures are stored under `figures/modern/`. All figures were produced programmatically by the analysis scripts.
+
+The main report presents the cross-validated ROC, calibration, and paired-performance figures. Additional files include predicted-probability distributions and sensitivity-analysis comparisons.
+
 ## Exploratory tumor-volume figure
 
+@fig-volume shows the apparent full-data relationship between recorded tumor volume and predicted capsule-penetration probability from the exploratory two-part volume model.
+
 ![Exploratory tumor-volume relationship](../figures/modern/exploratory_volume_predictions.png){#fig-volume}
+
+The plotted probabilities hold age, `dpros`, PSA, and Gleason score at fixed reference values. The figure is descriptive and exploratory. It does not represent externally validated performance or establish a causal relationship between tumor volume and capsule penetration.
+
+The relationship among positive recorded volumes is nearly flat. Interpretation remains limited by uncertainty about what the 167 recorded zero values represent.
