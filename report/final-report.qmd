@@ -560,53 +560,101 @@ Overall, the sensitivity analyses supported the primary conclusions. Neither `dc
 
 ## Principal findings
 
-<!--
-Lead with the equivalence of the historical and primary models, lack of
-benefit from nonlinear PSA, and evidence of modest overfitting.
--->
+This project reproduced the central results of the 2018 SDSU analysis and extended that work by evaluating out-of-sample predictive performance. The historical benchmark achieved a mean cross-validated ROC AUC of approximately 0.81, indicating useful but imperfect discrimination between patients with and without prostatic capsule penetration.
+
+The prespecified primary modern model performed almost identically to the historical benchmark. Adding age and representing PSA as `log2(psa)` improved interpretation but did not materially improve prediction. The small differences in AUC, Brier score, log loss, and calibration varied in direction and were not large enough to establish the superiority of either model.
+
+Allowing a nonlinear PSA relationship did not improve predictive performance. The nonlinear model had slightly poorer discrimination and prediction error, a lower calibration slope, and greater variability in individual predicted probabilities. Its additional flexibility therefore increased instability without yielding a predictive benefit.
+
+All three models had calibration intercepts close to zero, indicating little systematic overprediction or underprediction of the overall outcome frequency. Their calibration slopes were below one, however, suggesting that predicted probabilities were somewhat too extreme in held-out observations. This evidence of modest overfitting was greatest for the nonlinear model.
+
+Taken together, the results favor a parsimonious logistic regression model. More complex representations and additional predictors did not produce a clear, stable improvement in this dataset.
 
 ## Relationship to the 2018 conclusions
 
-<!--
-Explain what was confirmed, corrected, clarified, and extended.
--->
+The reproduction confirmed most of the central numerical findings reported in 2018. PSA, Gleason score, and digital rectal examination findings were associated with capsule penetration, and the reported final-model coefficients, confidence intervals, odds ratios, and AIC were recovered.
+
+The modern analysis also confirmed that these predictors contain useful predictive information. This extends the historical findings beyond in-sample association: the model retained meaningful discrimination when predictions were generated for observations excluded from model fitting.
+
+Two aspects of the historical analysis required qualification. The p-value reported as 0.31 for `dpros = 2` was reproduced as 0.02997 and was classified as a typographical error. In addition, the model selected by the documented stepwise AIC procedure contained a `dpros`-by-PSA interaction and differed from the final model reported in 2018. The available materials did not explain the transition between these models.
+
+These findings do not invalidate the reported final model, which was numerically reproducible. They clarify that it was not the direct output of the documented stepwise procedure.
+
+The modern extension also changes the interpretation of model adequacy. The 2018 analysis showed that several baseline measurements were associated with capsule penetration within the analyzed sample. The present analysis demonstrates that the same measurements support moderately accurate internal predictions, while also revealing modest overfitting and variability that could not be identified from the historical in-sample results alone.
 
 ## Parsimony and model complexity
 
-<!--
-Discuss the small dataset, added variance from complexity, calibration slopes,
-and prediction instability.
--->
+The similarity between the historical benchmark and primary modern model is substantively important. The addition of age and transformation of PSA altered model specification but produced almost no change in cross-validated performance. The historical benchmark therefore remains a competitive and somewhat simpler predictive model within this dataset.
+
+The nonlinear PSA model required two additional predictor parameters relative to the primary model. The formal sample-size assessment indicated that this level of complexity was not supported under the most conservative anticipated-performance scenario. Its empirical performance was consistent with that concern: it had worse calibration, slightly worse prediction error, and more variable individual predictions.
+
+This result illustrates why additional flexibility should not be assumed to improve prediction. A more flexible model can describe patterns in its training observations that do not persist in held-out data. With only 380 observations, small changes in the model-development sample can also alter estimated nonlinear relationships and individual risk predictions.
+
+The analysis therefore supports retaining the primary model in its prespecified role while recognizing that it did not outperform the simpler benchmark. It does not support adopting the nonlinear model.
+
+Parsimony is especially important because the available validation is internal. A model that performs marginally better in repeated cross-validation but requires more parameters may not retain that advantage in a different population. In the present analysis, even that marginal improvement was absent.
 
 ## Interpretation of PSA
 
-<!--
-Contrast raw PSA, the doubling-based log2 interpretation, and the unsupported
-nonlinear extension.
--->
+The historical benchmark modeled PSA in its original units. Its coefficient described the change in odds associated with a one-unit increase in PSA, regardless of the starting value. Because PSA was strongly right-skewed and ranged from 0.3 to 139.7, this representation may not reflect how proportional changes are interpreted across its observed range.
+
+The primary modern model used `log2(psa)`. Under this representation, a one-unit increase corresponds to a doubling of PSA. The fitted full-data coefficient indicated that each doubling was associated with approximately 42% higher odds of capsule penetration, conditional on the other predictors.
+
+The logarithmic transformation therefore offered a clearer proportional interpretation. It also reduced the influence of very large PSA values. Its use was supported primarily by interpretability and distributional considerations, not by a demonstrated improvement in predictive performance.
+
+The nonlinear model examined whether the relationship between log-transformed PSA and capsule penetration required additional curvature. Its poorer cross-validated performance provided no evidence that the added spline flexibility was beneficial. Within the limits of this dataset, a linear term for `log2(psa)` was adequate for the modern model.
+
+This conclusion should not be interpreted as proof that the underlying biological relationship is exactly linear on the log-odds scale. It indicates only that the available sample did not support the prespecified nonlinear extension as a better predictive representation.
 
 ## Sensitivity findings
 
-<!--
-Integrate the dcaps, zero-Gleason, and volume findings without repeating the
-full results section.
--->
+Adding baseline detection of capsular involvement (`dcaps`) produced negligible and inconsistent changes in predictive performance. Its addition did not meaningfully improve discrimination, overall prediction error, or calibration. Excluding it from the primary model therefore does not appear to omit an important source of incremental predictive information.
+
+Removing the two observations with Gleason score equal to zero had virtually no effect on matched cross-validated performance, calibration, or full-data coefficients. The primary conclusions were not driven by these unusual records, supporting the decision to retain them as documented in the public dataset.
+
+The exploratory tumor-volume model produced small improvements in AUC, Brier score, and log loss, but these improvements were not uniform across resampling repeats and were accompanied by a worse calibration slope. The fitted relationship among positive volume values was nearly flat, suggesting that any apparent information arose mainly from distinguishing zero from positive recorded volume.
+
+Because the meaning of the 167 zero volume values is unknown, this distinction cannot be interpreted reliably. The volume results are therefore inconclusive and do not justify adding tumor volume to the primary model.
+
+Collectively, the sensitivity analyses reinforce the main conclusion: none of the examined additions or exclusions produced a clear and stable improvement over the prespecified primary model.
 
 ## Implications
 
-<!--
-Discuss reproducibility, internal validation, and why complexity is not
-automatically beneficial.
--->
+The project demonstrates how an earlier statistical analysis can be extended without erasing its historical context. Reproducing the original workflow first made it possible to distinguish numerical agreement, typographical error, undocumented analytical judgment, and methodological limitations.
+
+Prespecification was important because it separated planned comparisons from conclusions formed after examining the results. The primary model retained its designated role even though it did not achieve uniformly better performance than the historical benchmark. Similarly, the tumor-volume model remained exploratory despite small improvements in several measures.
+
+Repeated cross-validation provided information that apparent full-data performance could not. It showed that discrimination remained useful in held-out observations, while calibration slopes and prediction variability revealed modest overfitting and uncertainty in individual probabilities.
+
+The findings also illustrate that modernizing an analysis does not necessarily mean adopting a more complicated model. In this project, the most useful improvements were reproducible data acquisition, explicit predictor definitions, prespecification, leakage controls, internal validation, calibration assessment, and transparent sensitivity analyses. Increasing model complexity itself did not improve the findings.
+
+For this historical dataset, a straightforward logistic regression using digital rectal examination findings, PSA, and Gleason score provides a reasonable baseline. However, the available evidence is insufficient to select a model for contemporary clinical use.
 
 # Limitations
 
-<!--
-Consolidate sample size, historical setting, confidentiality modification,
-demographic limitations, zero-volume uncertainty, lack of external
-validation, correlated resampling estimates, prediction instability, and
-absence of clinical-utility evaluation.
--->
+This project has several important limitations.
+
+First, the dataset contains only 380 observations and 153 capsule-penetration outcomes. Although the formal assessment supported the primary model for this educational internal-validation study, the margin was narrow under conservative assumptions. Coefficient estimates, calibration, and individual predicted probabilities may therefore remain unstable. The more complex nonlinear, `dcaps`, and tumor-volume models were less well supported.
+
+Second, the data originated from a single historical clinical setting. Clinical practices, diagnostic definitions, patient characteristics, PSA measurement, imaging, biopsy procedures, Gleason grading, and treatment pathways may differ from contemporary practice. Performance in this dataset cannot establish transportability to current patients or other institutions.
+
+Third, the published values were modified to protect confidentiality. Although the dataset retains value for statistical education, its measurements should not be interpreted as an unaltered contemporary clinical cohort.
+
+Fourth, the demographic information is limited. Race was represented using only two historical codes, had three missing values, and included relatively few observations in the second category. Race was therefore excluded from modern prediction. The dataset cannot support a meaningful assessment of algorithmic fairness or performance across relevant demographic and clinical subgroups.
+
+Fifth, the meaning of the 167 zero tumor-volume values is uncertain. They may indicate no measurable tumor, a measurement below detection, an examination not performed, missing information encoded as zero, or another historical convention. This uncertainty prevents confident interpretation of the exploratory distinction between zero and positive volume.
+
+Sixth, two observations had Gleason scores recorded as zero. The prespecified exclusion analysis showed that they did not materially affect the results, but their presence illustrates the limited contextual documentation available for unusual historical values.
+
+Seventh, the analysis used repeated cross-validation for internal validation but had no independent external-validation dataset. Repeated cross-validation uses the available sample efficiently and exposes sensitivity to different partitions, but it does not create new independent observations. Estimates from the 20 repeats are correlated, and their percentile ranges describe resampling variability rather than formal confidence intervals.
+
+Eighth, individual out-of-fold probabilities varied across resampling repeats. This instability was greatest for the nonlinear model but was also present for the simpler models. Consequently, the reported average performance should not be interpreted as evidence that every individual prediction is precise or reliable.
+
+Ninth, the project deliberately evaluated a limited model set. It did not conduct an unrestricted comparison of machine-learning algorithms, interactions, transformations, spline specifications, or penalized models. This restriction reduced data-driven selection and overfitting but means that unexamined approaches could perform differently. The current sample would not support a broad model search with reliable internal comparison.
+
+Tenth, the project did not define a clinical intervention or a defensible probability threshold. Threshold-dependent classification performance, decision-curve analysis, clinical consequences, and effects on patient outcomes were therefore not evaluated.
+
+Finally, no model was externally validated, prospectively evaluated, or compared with contemporary clinical practice. The results establish reproducibility and internally validated predictive performance only within this historical teaching dataset. They do not establish contemporary clinical validity, fairness, utility, or safety, and the models must not be used for clinical decision-making.
 
 # Reproducibility and Transparency
 
