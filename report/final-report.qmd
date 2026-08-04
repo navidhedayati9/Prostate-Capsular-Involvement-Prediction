@@ -195,68 +195,145 @@ These features restrict the precision, generalizability, fairness assessment, an
 
 ## Reproduction approach
 
-<!--
-Summarize the historical workflow. Link to historical-reproduction-plan.md
-rather than duplicating its technical specification.
--->
+The historical reproduction evaluated whether the principal numerical results and conclusions of the 2018 SDSU project could be recovered from the verified historical dataset and documented R workflow. Its purpose was to reproduce the earlier analysis faithfully, rather than to revise it according to current statistical practice.
+
+The reproduction used the eight-variable SDSU version of the dataset. Following the original workflow, complete-case deletion was applied across all variables. Records 22, 46, and 252 were excluded because race was missing, leaving 377 observations, including 151 capsule-penetration outcomes.
+
+The workflow reproduced:
+
+- dataset and outcome counts;
+- descriptive statistics and exploratory figures;
+- two-sample and chi-square tests;
+- the documented stepwise model-selection procedure;
+- the final logistic regression model reported in 2018;
+- coefficient estimates, confidence intervals, odds ratios, and AIC; and
+- residual, leverage, and influence diagnostics.
+
+Numerical results were classified as reproduced, affected only by rounding, corrected, not reproducible, or ambiguous according to criteria established before running the reproduction. The complete technical protocol is provided in the [historical reproduction plan](historical-reproduction-plan.md).
 
 ## Reproduced results
 
-<!--
-Summarize the reproduced dataset, descriptive, univariate, coefficient,
-confidence-interval, odds-ratio, and AIC results.
--->
+The dataset description and principal descriptive results were reproduced successfully. The historical analysis population had mean age 66.04 years, mean PSA 15.41, and mean Gleason score 6.38.
 
-## Corrected and ambiguous findings
+The univariate analyses also recovered the main findings of the 2018 report. PSA and Gleason score differed substantially between patients with and without capsule penetration, whereas age did not show evidence of a difference. Digital rectal examination findings (`dpros`) and baseline detection of capsular involvement (`dcaps`) were associated with capsule-penetration status. Recorded race was not associated with the outcome.
 
-<!--
-Discuss the corrected dpros=2 p-value and the difference between the
-stepAIC-selected interaction model and the reported final model.
--->
+These comparisons represent unadjusted associations. They do not measure out-of-sample prediction and should not be interpreted as evidence of causal effects.
 
-## Historical diagnostic findings
-
-<!--
-Explain diagnostic screening, why flags do not mandate deletion, and the
-role of the conservative combined-removal stress test.
--->
-
-<!--
-Table 2: historical reproduction classifications.
-Source: historical-reproduction-findings.md and results/historical/.
--->
-
-# Modern Methods
-
-## Prespecification and sample-size assessment
-
-<!--
-Summarize the approved protocol, timing before model fitting, Riley framework,
-and model-complexity conclusions.
--->
-
-## Predictor specification
-
-<!--
-Explain age, categorical dpros, log2(PSA), continuous Gleason, exclusion of
-race, and the separate roles of dcaps and tumor volume.
--->
-
-## Models
-
-### Historical benchmark
+The final logistic regression model reported in 2018 was:
 
 ```r
 capsule ~ factor(dpros) + psa + gleason
 ```
 
+All six coefficient estimates, coefficient confidence intervals, odds ratios, odds-ratio confidence intervals, and the reported AIC of 393.22 were reproduced at the original reporting precision.
+
+Conditional on the other predictors, higher `dpros` categories were associated with greater odds of capsule penetration relative to category 1. Each one-unit increase in PSA was associated with approximately 2.8% higher odds, and each one-point increase in Gleason score was associated with approximately 2.71 times the odds of capsule penetration.
+
+Because the historical model was estimated and assessed using the same observations, these results describe in-sample associations. They do not establish how accurately the model predicts outcomes in new observations.
+
+## Corrected and ambiguous findings
+
+Two qualifications emerged from the reproduction.
+
+First, the 2018 regression table reported a p-value of 0.31 for `dpros = 2`. The reproduced value was 0.02997. The corresponding coefficient, standard error, confidence interval, and odds ratio all agreed with the historical results, and the confidence interval excluded the null value. The reported p-value is therefore classified as a corrected typographical error.
+
+Second, the documented bidirectional stepwise AIC procedure selected:
+
+```r
+capsule ~ dpros + psa + gleason + dpros:psa
+```
+
+This model had an AIC of 391.94. It was not the same as the final model reported in 2018, which treated `dpros` as categorical, omitted the interaction, and had an AIC of 393.22.
+
+The historical code appears to have fitted the reported model manually after completing the stepwise procedure. The available materials do not explain why the interaction was removed or why `dpros` was changed from a numeric term to a categorical factor. The transition from the selected model to the reported model is therefore classified as ambiguous, although the reported final model itself is reproducible.
+
+| Component | Classification | Finding |
+|---|---|---|
+| Dataset counts and missing-value locations | Reproduced | Exact agreement |
+| Descriptive and principal univariate results | Reproduced | Same numerical and substantive findings |
+| Final-model estimates and intervals | Reproduced | All six coefficient and odds-ratio results recovered |
+| Final-model AIC | Reproduced | AIC = 393.22 |
+| P-value for `dpros = 2` | Corrected | Reported as 0.31; reproduced as 0.02997 |
+| Transition from stepwise selection to the reported model | Ambiguous | The reason for changing models was not documented |
+| Claim about removing flagged observations | Not supported without qualification | Simultaneous removal materially changed estimates |
+
+: Classification of the principal historical reproduction findings {#tbl-historical-reproduction}
+
+## Historical diagnostic findings
+
+The historical final model was examined using standardized Pearson residuals, Cook's distance, and leverage. These screens identified 13 observations with an absolute standardized residual greater than 2, 25 with Cook's distance greater than `4/n`, and 24 with leverage greater than `2p/n`. Forty-three observations met at least one criterion.
+
+A diagnostic flag indicates that an observation warrants examination; it does not demonstrate that the observation is erroneous or should be deleted. The primary historical model therefore retained all 377 complete observations.
+
+To assess the strongest plausible effect of the flagged records, a conservative stress test simultaneously removed the union of all 43 observations. This reduced the analysis population to 334 and produced substantial changes in several coefficients. The exercise was intentionally more aggressive than an ordinary observation-by-observation diagnostic assessment and is not proposed as an alternative final analysis. Nevertheless, it does not support an unqualified claim that removal of all flagged observations would leave the model materially unchanged.
+
+Overall, the central numerical findings of the 2018 analysis were highly reproducible. The reproduction confirmed the historical associations while correcting one p-value, clarifying an undocumented model-selection transition, and demonstrating why internal validation was needed before interpreting the model as a predictive tool. Detailed results are available in the [historical reproduction findings](historical-reproduction-findings.md).
+
+# Modern Methods
+
+## Prespecification and sample-size assessment
+
+The modern analysis was specified before its models were fitted and compared. The protocol defined the analysis population, predictor representations, candidate models, validation procedure, performance measures, sensitivity analyses, and interpretation rules. No stepwise selection, univariate predictor screening, or automated predictor elimination was permitted.
+
+The dataset contained 380 observations, including 153 capsule-penetration outcomes. Model complexity was evaluated by counting estimated predictor parameters rather than variable names.
+
+A formal sample-size assessment used the binary-outcome framework of Riley and colleagues. Calculations considered conservative, intermediate, and optimistic assumptions about the anticipated Cox--Snell \(R^2\), a target global shrinkage of at least 0.90, and precision criteria for adjusted model performance and overall outcome risk.
+
+The six-parameter primary model required 370 observations under the conservative scenario, compared with 380 available observations. It was therefore considered reasonably supported for an educational internal-validation study, although the margin was narrow. The more complex nonlinear, `dcaps`, and tumor-volume models were expected to be more susceptible to overfitting under conservative assumptions. These models were retained only in their prespecified secondary, sensitivity, or exploratory roles.
+
+Repeated cross-validation can estimate internal performance efficiently, but it does not create additional independent patients or eliminate uncertainty arising from the limited original sample.
+
+## Predictor specification
+
+Age was represented as a continuous predictor. It was retained in the primary model because predictor inclusion was based on the prespecified clinical and analytical role of each variable rather than its univariate p-value in the historical analysis.
+
+The four-level digital rectal examination variable, `dpros`, was represented categorically. This avoids assuming that its category codes are equally spaced or that moving between every pair of adjacent categories has the same effect on the log odds.
+
+PSA was represented as `log2(psa)` in the primary model. The logarithmic transformation reduces the influence of the strongly right-skewed PSA distribution and expresses proportional rather than absolute differences. With base 2, a one-unit increase corresponds to a doubling of PSA, providing a direct clinical interpretation. The choice of logarithm base changes the coefficient scale but not the fitted values of an otherwise identical linear-log model.
+
+Gleason score was represented as a continuous linear term. Additional nonlinear terms were not introduced because the limited sample did not support unrestricted flexibility.
+
+Recorded race was excluded from modern modeling. Its historical coding was limited to two categories, included only 36 observations in the second category, and contained three missing values. The confidentiality-modified dataset also does not support a meaningful contemporary interpretation of race or an adequate fairness assessment.
+
+`dcaps` was reserved for a sensitivity analysis because it records baseline detection of possible capsular involvement and may therefore be closely connected to the outcome being predicted.
+
+Tumor volume was reserved for an exploratory analysis because it was absent from the SDSU dataset and 167 of its 380 values were recorded as zero. The documentation does not establish what those zeros consistently represent.
+
+## Models
+
+Three models formed the main prespecified comparison.
+
+| Model | Specification | Predictor parameters | Role |
+|---|---|---:|---|
+| Historical benchmark | `factor(dpros) + psa + gleason` | 5 | Re-evaluate the reported 2018 model |
+| Primary modern model | `age + factor(dpros) + log2(psa) + gleason` | 6 | Prespecified primary model |
+| Nonlinear PSA model | `age + factor(dpros) + ns(log2(psa), df = 3) + gleason` | 8 | Limited secondary assessment of nonlinearity |
+
+: Prespecified primary model comparison {#tbl-model-definitions}
+
+### Historical benchmark
+
+The historical benchmark reproduced the final predictor specification reported in 2018:
+
+```r
+capsule ~ factor(dpros) + psa + gleason
+```
+
+This model provided a direct connection to the historical project and allowed its predictive performance to be evaluated using modern internal-validation methods.
+
 ### Primary modern model
+
+The prespecified primary model was:
 
 ```r
 capsule ~ age + factor(dpros) + log2(psa) + gleason
 ```
 
+This model retained a small set of interpretable baseline predictors, represented `dpros` categorically, and replaced raw PSA with a doubling-based logarithmic term. The model was designated as primary before its performance was examined and was not to be replaced merely because another model achieved a numerically better result.
+
 ### Nonlinear PSA model
+
+A limited nonlinear alternative was specified as:
 
 ```r
 capsule ~ age +
@@ -265,30 +342,64 @@ capsule ~ age +
   gleason
 ```
 
-<!--
-Table 3: prespecified model definitions and parameter counts.
--->
+The natural cubic spline allowed the relationship between log-transformed PSA and the log odds of capsule penetration to depart from a straight line while remaining linear beyond its boundary knots. Three degrees of freedom were fixed in advance. Knot placement and spline construction were determined using only the analysis portion of each cross-validation fold.
+
+This was the only prespecified nonlinear extension. No search was conducted across transformations, spline complexities, or interaction terms.
+
+All models were estimated using maximum-likelihood logistic regression. Predictor terms were retained regardless of their p-values. Convergence, fitted probabilities, and possible separation were checked.
 
 ## Internal validation
 
-<!--
-Describe the stratified 10-fold cross-validation repeated 20 times, identical
-folds, out-of-fold prediction, leakage controls, and absence of a one-time
-test split.
--->
+Predictive performance was estimated using stratified 10-fold cross-validation repeated 20 times. A one-time training and test split was not used because it would have reduced the already limited model-development sample and produced an imprecise test-set assessment.
+
+Within each repeat, the observations were divided into 10 folds while approximately preserving the outcome proportion. Each fold was held out in turn, and its probabilities were predicted from a model fitted using only the other nine folds. Every observation therefore received one out-of-fold prediction in each repeat and 20 out-of-fold predictions across the complete procedure.
+
+The same fold assignments were used for every model. This pairing ensured that model differences were not confounded with different training and assessment samples. A fixed random seed was used, and all assignments were saved.
+
+Data-dependent operations were confined to the corresponding analysis fold. In particular, the nonlinear model's spline basis was constructed without using its held-out assessment observations. This prevented information from the assessment folds from entering model estimation.
+
+Performance was calculated separately from the complete set of out-of-fold predictions in each repeat. Variability across the 20 repeats was retained to show sensitivity to different data partitions. The repeat-level estimates are correlated, so their percentile ranges were interpreted as resampling variability rather than formal confidence intervals.
 
 ## Performance measures
 
-<!--
-Define ROC AUC, Brier score, log loss, calibration intercept, and calibration
-slope. Clarify that repeat percentiles are not formal confidence intervals.
--->
+Discrimination was assessed using the area under the receiver operating characteristic curve. ROC AUC measures how often a randomly selected patient with capsule penetration receives a higher predicted probability than a randomly selected patient without penetration. A value of 0.5 represents chance-level ranking, whereas 1 represents perfect ranking.
+
+Overall probabilistic accuracy was evaluated using the Brier score and logarithmic loss. The Brier score is the mean squared difference between the binary outcome and predicted probability. Logarithmic loss gives a larger penalty to confident predictions that are incorrect. Lower values indicate better performance for both measures.
+
+Calibration was evaluated using the calibration intercept and calibration slope. The intercept measures systematic underprediction or overprediction and is ideally near zero. The slope measures whether predicted probabilities are too extreme or insufficiently variable and is ideally near one. A slope below one is commonly consistent with overfitting or overly extreme predictions.
+
+Calibration was also assessed graphically by comparing observed and predicted outcome frequencies. Sparse regions of predicted risk were interpreted cautiously.
+
+Performance differences were calculated within identical resampling repeats. Small numerical differences were interpreted in relation to their direction, consistency across repeats, calibration, and model complexity---not solely according to which model produced the highest mean AUC.
+
+Threshold-dependent classification measures were not used to select a model because this historical educational project does not define a clinical intervention or a defensible probability threshold. Decision-curve analysis was likewise not performed.
 
 ## Sensitivity and exploratory analyses
 
-<!--
-Summarize the dcaps, zero-Gleason, and two-part tumor-volume analyses.
--->
+Three additional analyses were defined separately from the primary model comparison.
+
+The `dcaps` sensitivity model added categorical `dcaps` to the primary modern model:
+
+```r
+capsule ~ age +
+  factor(dpros) +
+  log2(psa) +
+  gleason +
+  factor(dcaps)
+```
+
+This analysis evaluated whether baseline detection of possible capsular involvement added predictive information beyond the primary predictors. It was kept separate because of the variable's close conceptual relationship to the outcome.
+
+The zero-Gleason sensitivity analysis repeated the primary model after excluding records 282 and 357, whose Gleason scores were recorded as zero. Their values were retained in the primary analysis because they fall within the documented public coding, but their unusual nature justified a separate robustness assessment.
+
+The exploratory tumor-volume model added a two-part representation of `vol` to the primary model:
+
+1. an indicator distinguishing zero from positive recorded volume; and
+2. `log2(vol)` among positive values, coded as zero when volume was zero.
+
+This representation avoided treating the difference between zero and a positive measurement as equivalent to proportional differences among positive volumes. Because the meaning of the recorded zeros is uncertain and the two-part representation adds two parameters, this model was classified as exploratory and could not replace the primary model solely on the basis of a small performance advantage.
+
+All sensitivity and exploratory models used the same repeated cross-validation principles and performance measures as the primary comparison. Their analytical roles remained fixed after the results were observed.
 
 # Modern Results
 
