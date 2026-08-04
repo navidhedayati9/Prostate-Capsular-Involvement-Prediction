@@ -25,10 +25,15 @@ clinical decisions.
 
 ## Abstract {.unnumbered}
 
-<!--
-Draft a 250–300 word structured summary covering background, objective,
-methods, principal numerical results, and conclusion.
--->
+**Background:** A 2018 SDSU analysis used logistic regression to examine baseline measurements associated with prostatic capsule penetration. This project reproduced that work and extended it using prespecified methods focused on out-of-sample prediction, calibration, and model stability.
+
+**Objective:** To evaluate how accurately baseline clinical measurements predict prostatic capsule penetration among patients diagnosed with prostate cancer and whether limited modern extensions improve predictive performance.
+
+**Methods:** The public Prostate Cancer Study dataset contained 380 observations and 153 outcomes. The historical reproduction used 377 complete cases. Three logistic regression models were compared using stratified 10-fold cross-validation repeated 20 times: the historical benchmark, a primary model containing age, categorical digital rectal examination findings, `log2(psa)`, and Gleason score, and a nonlinear PSA model. Performance measures included ROC AUC, Brier score, log loss, calibration intercept, calibration slope, and prediction stability. Sensitivity analyses evaluated `dcaps` and two zero Gleason scores; tumor volume was exploratory.
+
+**Results:** The principal historical coefficients, confidence intervals, odds ratios, and AIC were reproduced. One p-value was corrected from 0.31 to 0.02997, and the documented stepwise procedure selected a different model from the one ultimately reported. Mean cross-validated AUC was 0.809 for the historical benchmark, 0.810 for the primary model, and 0.805 for the nonlinear model. The historical and primary models had nearly identical prediction error. Calibration slopes were 0.920, 0.914, and 0.884, respectively, indicating modest overfitting that was greatest for the nonlinear model. Adding `dcaps` and excluding the zero Gleason scores did not materially change performance. Tumor-volume findings were inconclusive.
+
+**Conclusions:** The historical results were highly reproducible, and the original predictors retained useful but imperfect discrimination. Additional complexity did not provide a clear or stable predictive benefit. The findings favor a parsimonious logistic regression model but represent internal validation of a small historical teaching dataset, not a contemporary clinical prediction tool.
 
 # Introduction
 
@@ -740,10 +745,15 @@ These conclusions apply only to this small, confidentiality-modified dataset fro
 
 # References {.unnumbered}
 
-<!--
-Include Hosmer and Lemeshow; Hedayati (2018); TRIPOD+AI; PROBAST+AI; Riley
-and colleagues; and any additional methods cited in the final narrative.
--->
+Collins, G. S., Moons, K. G. M., Dhiman, P., et al. (2024). TRIPOD+AI statement: Updated guidance for reporting clinical prediction models that use regression or machine learning methods. *BMJ, 385*, e078378. [https://doi.org/10.1136/bmj-2023-078378](https://doi.org/10.1136/bmj-2023-078378)
+
+Hedayati, N. (2018). *Detection of Prostate Cancer: Data Analysis Report 2*. Unpublished course report, STAT 696: Statistical Communication in Data Science, San Diego State University.
+
+Hosmer, D. W., Jr., & Lemeshow, S. (2000). *Applied Logistic Regression* (2nd ed.). John Wiley & Sons. [https://doi.org/10.1002/0471722146](https://doi.org/10.1002/0471722146)
+
+Moons, K. G. M., Damen, J. A. A., Kaul, T., et al. (2025). PROBAST+AI: An updated quality, risk of bias, and applicability assessment tool for prediction models using regression or artificial intelligence methods. *BMJ, 388*, e082505. [https://doi.org/10.1136/bmj-2024-082505](https://doi.org/10.1136/bmj-2024-082505)
+
+Riley, R. D., Snell, K. I. E., Ensor, J., et al. (2019). Minimum sample size for developing a multivariable prediction model: Part II—Binary and time-to-event outcomes. *Statistics in Medicine, 38*, 1276–1296. [https://doi.org/10.1002/sim.7992](https://doi.org/10.1002/sim.7992)
 
 # Supplementary Material {.unnumbered}
 
