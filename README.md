@@ -15,6 +15,18 @@ The project has two principal components:
 
 The modern extension follows a documented analysis plan created before model fitting. It uses repeated cross-validation and compares a limited set of interpretable logistic regression models.
 
+## Final report
+
+The completed integrated report is available in two formats:
+
+- [Self-contained HTML report](report/final-report.html)
+- [Quarto source](report/final-report.qmd)
+
+The HTML file contains its figures and supporting resources in a single file.
+When viewing the repository on GitHub, download the HTML file and open it in a
+web browser. The Quarto source is the authoritative, reproducible report
+source.
+
 ## Research question
 
 > How accurately can baseline clinical measurements predict prostatic capsule penetration among patients diagnosed with prostate cancer?
@@ -202,6 +214,7 @@ The reported performance represents internal validation only. The models have no
 ### Requirements
 
 - R
+- Quarto for rendering the integrated report
 - the package versions recorded in `renv.lock`
 - internet access during initial package restoration and data acquisition
 
@@ -239,6 +252,21 @@ Rscript --vanilla R/05_sensitivity_analyses.R
 
 The workflow will stop if expected files, dataset structure, values, transformations, resampling assignments, or model outputs fail validation.
 
+Render the integrated HTML report after completing the analysis:
+
+```sh
+quarto render report/final-report.qmd --to html
+```
+
+The rendered output is written to:
+
+```text
+report/final-report.html
+```
+
+The repository includes an approved rendered copy for convenient reading.
+The `.qmd` file remains the authoritative source.
+
 ## Repository structure
 
 ```text
@@ -258,6 +286,8 @@ The workflow will stop if expected files, dataset structure, values, transformat
 │   ├── historical/
 │   └── modern/
 ├── report/
+│   ├── final-report.qmd
+│   ├── final-report.html
 │   ├── historical-reproduction-plan.md
 │   ├── historical-reproduction-findings.md
 │   ├── modern-analysis-plan.md
@@ -322,6 +352,19 @@ This repository is intended for statistical education and methodological demonst
 
 It is not a medical device and must not be used to make clinical decisions.
 
+## Licensing
+
+The repository uses separate licenses for software and original project
+content:
+
+- R scripts and other software code are licensed under the MIT License.
+- Documentation, report text, original figures, and project-produced
+  analytical results are licensed under the Creative Commons Attribution 4.0
+  International License.
+
+The source dataset and other third-party materials remain governed by their
+original licenses and terms. See [LICENSE.md](LICENSE.md) for details.
+
 ## Historical context and suggested citation
 
 The original report was completed by Navid Hedayati in 2018 as part of STAT 696 at San Diego State University.
@@ -329,6 +372,9 @@ The original report was completed by Navid Hedayati in 2018 as part of STAT 696 
 The historical work may be cited as:
 
 > Hedayati, N. (2018). *Detection of Prostate Cancer: Data Analysis Report 2*. Unpublished course report, STAT 696, San Diego State University.
+
+Citation metadata for the complete modern repository is provided in
+[`CITATION.cff`](CITATION.cff).
 
 ## References
 
@@ -342,21 +388,21 @@ Riley, R. D., Snell, K. I. E., Ensor, J., et al. (2019). Minimum sample size for
 
 ## Project status
 
-Completed:
+The project is complete and includes:
 
-- historical data-source verification;
-- reproducible data acquisition;
-- historical reproduction plan;
-- historical reproduction analysis;
-- historical findings document;
-- modern analysis plan;
+- verified public data provenance and reproducible acquisition;
+- historical reproduction of the 2018 analysis;
+- documented corrections and model-selection ambiguity;
+- a prespecified modern analysis plan;
 - formal sample-size and model-complexity assessment;
 - modern input validation;
-- repeated cross-validation analysis;
-- sensitivity and exploratory analyses; and
-- modern findings document.
+- repeated cross-validation of the primary model comparison;
+- sensitivity and exploratory analyses;
+- machine-readable results and programmatically generated figures;
+- a complete integrated Quarto report;
+- an approved self-contained HTML report;
+- a recorded and restorable R package environment; and
+- a final repository audit for public release.
 
-Remaining:
-
-- assemble the integrated final project report; and
-- perform final repository review before public release.
+The reported model performance represents internal validation of a historical
+teaching dataset. The models are not intended for clinical use.

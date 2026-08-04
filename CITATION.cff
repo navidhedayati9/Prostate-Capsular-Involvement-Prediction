@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, its code, or its analytical materials, please
+  cite it using the metadata below.
+title: "Predicting Prostatic Capsule Penetration: A Modern Extension of a 2018 Analysis"
+type: software
+authors:
+  - family-names: Hedayati
+    given-names: Navid
+repository-code: "https://github.com/navidhedayati9/prostatic-capsular-penetration"
+abstract: >-
+  A reproducible historical and modern logistic-regression analysis of
+  prostatic capsule penetration. The project reproduces a 2018 SDSU analysis
+  and extends it using prespecification, formal model-complexity assessment,
+  repeated cross-validation, calibration evaluation, model-stability
+  assessment, and sensitivity analyses.
+keywords:
+  - R
+  - logistic regression
+  - clinical prediction
+  - repeated cross-validation
+  - reproducible research
+  - prostatic capsule penetration
+  - prostate cancer
