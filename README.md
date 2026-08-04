@@ -17,15 +17,16 @@ The modern extension follows a documented analysis plan created before model fit
 
 ## Final report
 
-The completed integrated report is available in two formats:
+The completed integrated report is available in three formats:
 
 - [Self-contained HTML report](report/final-report.html)
+- [PDF report](report/final-report.pdf)
 - [Quarto source](report/final-report.qmd)
 
 The HTML file contains its figures and supporting resources in a single file.
 When viewing the repository on GitHub, download the HTML file and open it in a
-web browser. The Quarto source is the authoritative, reproducible report
-source.
+web browser. GitHub can preview the PDF directly. The Quarto source is the
+authoritative, reproducible report source.
 
 ## Research question
 
@@ -252,19 +253,20 @@ Rscript --vanilla R/05_sensitivity_analyses.R
 
 The workflow will stop if expected files, dataset structure, values, transformations, resampling assignments, or model outputs fail validation.
 
-Render the integrated HTML report after completing the analysis:
+Render both reader-ready report formats after completing the analysis:
 
 ```sh
-quarto render report/final-report.qmd --to html
+quarto render report/final-report.qmd
 ```
 
-The rendered output is written to:
+The rendered outputs are written to:
 
 ```text
 report/final-report.html
+report/final-report.pdf
 ```
 
-The repository includes an approved rendered copy for convenient reading.
+The repository includes approved rendered copies for convenient reading.
 The `.qmd` file remains the authoritative source.
 
 ## Repository structure
@@ -288,6 +290,7 @@ The `.qmd` file remains the authoritative source.
 ├── report/
 │   ├── final-report.qmd
 │   ├── final-report.html
+│   ├── final-report.pdf
 │   ├── historical-reproduction-plan.md
 │   ├── historical-reproduction-findings.md
 │   ├── modern-analysis-plan.md
