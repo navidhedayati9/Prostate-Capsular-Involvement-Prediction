@@ -7,7 +7,7 @@ type: software
 authors:
   - family-names: Hedayati
     given-names: Navid
-repository-code: "https://github.com/navidhedayati9/prostatic-capsular-penetration"
+repository-code: "https://github.com/navidhedayati9/predicting-prostatic-capsular-penetration"
 abstract: >-
   A reproducible historical and modern logistic-regression analysis of
   prostatic capsule penetration. The project reproduces a 2018 SDSU analysis
