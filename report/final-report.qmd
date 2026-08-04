@@ -405,49 +405,156 @@ All sensitivity and exploratory models used the same repeated cross-validation p
 
 ## Validation and computational checks
 
-<!--
-Report input-check counts, prediction counts, convergence, deterministic
-reruns, and adherence to the prespecified model set.
--->
+All 25 prespecified input-validation checks passed. The verified modern dataset contained 380 observations, including 153 capsule-penetration outcomes and 227 observations without penetration. All primary predictors were complete, PSA values were strictly positive, and the planned logarithmic and spline transformations produced finite values.
+
+The repeated cross-validation workflow generated:
+
+- 7,600 saved resampling assignments;
+- 22,800 out-of-fold predictions across the three primary comparison models;
+- 600 fitted cross-validation models; and
+- 300 repeat-level performance estimates.
+
+Every observation received one out-of-fold prediction from each model in each of the 20 repeats. All fitted models converged, and all predicted probabilities were finite and strictly between zero and one.
+
+The sensitivity and exploratory analyses reused the saved primary resampling assignments. No observations were removed based on model diagnostics, no additional candidate models were introduced after inspecting performance, and no material deviations from the approved analysis plan occurred.
+
+The saved outputs and fixed random seed allow the analyses to be rerun deterministically.
 
 ## Primary model comparison
 
-<!--
-Table 4: central cross-validated performance table.
-Source: ../results/modern/performance_summary.csv
--->
+Mean out-of-fold performance across the 20 cross-validation repeats is presented in @tbl-primary-performance.
+
+| Model | ROC AUC | Brier score | Log loss | Calibration intercept | Calibration slope |
+|---|---:|---:|---:|---:|---:|
+| Historical benchmark | 0.809 | 0.17315 | 0.51878 | −0.002 | 0.920 |
+| Primary modern | 0.810 | 0.17310 | 0.51925 | −0.003 | 0.914 |
+| Nonlinear PSA | 0.805 | 0.17461 | 0.52266 | −0.003 | 0.884 |
+
+: Mean cross-validated performance across 20 repeats {#tbl-primary-performance}
+
+Higher ROC AUC indicates better discrimination, whereas lower Brier score and log loss indicate better probabilistic performance. Calibration intercepts near zero and calibration slopes near one are preferable.
+
+The historical benchmark and primary modern model performed almost identically. Relative to the historical benchmark, the primary model had:
+
+- an AUC higher by 0.00045;
+- a Brier score lower by 0.00005;
+- a log loss higher by 0.00047; and
+- a calibration slope lower by 0.0063.
+
+The primary model therefore had a negligibly higher AUC and slightly lower Brier score, whereas the historical benchmark had slightly better log loss and a calibration slope closer to one. These differences were too small to support a claim that either model materially outperformed the other.
+
+Adding age and replacing raw PSA with `log2(psa)` changed the interpretation of the model but did not produce a meaningful improvement in out-of-sample prediction. The primary modern model remains the designated primary analysis because that role was established before performance was examined. The historical benchmark remains a similarly performing and somewhat simpler alternative.
+
+The nonlinear PSA model performed somewhat worse than the primary model. Its mean AUC was lower by approximately 0.0045, its Brier score was higher by approximately 0.0015, and its log loss was higher by approximately 0.0034. Its calibration slope was also approximately 0.030 lower.
+
+The additional spline parameters therefore did not improve predictive performance. The results do not support replacing the linear `log2(psa)` term with the prespecified three-degree-of-freedom natural spline.
 
 ![Cross-validated ROC curves](../figures/modern/cross_validated_roc.png){#fig-roc}
 
+The cross-validated ROC curves in @fig-roc demonstrate the close discrimination of the historical and primary modern models and the slightly weaker discrimination of the nonlinear model.
+
 ## Calibration and overfitting
 
-<!--
-Interpret calibration intercepts, slopes, and local uncertainty.
--->
+Mean calibration intercepts were close to zero for all three models:
+
+- −0.002 for the historical benchmark;
+- −0.003 for the primary modern model; and
+- −0.003 for the nonlinear PSA model.
+
+These values indicate little average tendency to systematically overpredict or underpredict the overall frequency of capsule penetration.
+
+Mean calibration slopes were below one:
+
+- 0.920 for the historical benchmark;
+- 0.914 for the primary modern model; and
+- 0.884 for the nonlinear PSA model.
+
+Slopes below one indicate that the predicted probabilities were somewhat too extreme when applied to held-out observations, consistent with modest overfitting. The lower slope of the nonlinear PSA model indicates greater overfitting associated with its additional flexibility.
 
 ![Cross-validated calibration curves](../figures/modern/cross_validated_calibration.png){#fig-calibration}
 
+The calibration curves in @fig-calibration show generally reasonable agreement between predicted and observed probabilities. Local departures are visible in parts of the predicted-risk range, but these should be interpreted cautiously because some regions contain relatively few observations.
+
 ## Model stability
 
-<!--
-Compare repeat-level performance and individual prediction variability.
--->
+Repeat-level performance varied modestly according to how the observations were assigned to folds. The historical benchmark and primary modern model remained closely matched across the repeated partitions, whereas the nonlinear PSA model generally showed poorer probabilistic performance and calibration.
 
 ![Paired performance across resampling repeats](../figures/modern/paired_resampling_performance.png){#fig-paired-performance}
 
+The paired comparisons in @fig-paired-performance demonstrate that the small differences between the historical and primary models were not uniformly in favor of either model across all performance measures and repeats.
+
+Individual predicted probabilities also varied across resampling partitions. For each observation, the standard deviation of its 20 out-of-fold predictions was calculated and then averaged across observations.
+
+| Model | Mean within-observation prediction SD |
+|---|---:|
+| Historical benchmark | 0.0160 |
+| Primary modern | 0.0173 |
+| Nonlinear PSA | 0.0197 |
+
+: Variability of individual out-of-fold predictions across repeats {#tbl-prediction-stability}
+
+The nonlinear model produced the greatest prediction variability. This pattern, together with its poorer calibration slope and prediction-error measures, indicates that its additional flexibility increased instability without improving predictive performance.
+
+The variability also illustrates an important limitation of individual predictions from a relatively small dataset: two models fitted to slightly different subsets of the same population can assign meaningfully different probabilities to the same patient.
+
 ## Primary-model coefficients
 
-<!--
-Provide a compact coefficient and odds-ratio table. Keep full-data coefficient
-interpretations secondary to cross-validated performance.
--->
+After internal validation was completed, the primary modern model was fitted to all 380 observations. Its coefficient estimates are summarized in @tbl-primary-coefficients.
+
+| Predictor | Coefficient | Odds ratio | 95% Wald odds-ratio interval |
+|---|---:|---:|---:|
+| Age, per year | −0.012 | 0.99 | 0.95 to 1.03 |
+| `dpros = 2` versus 1 | 0.768 | 2.15 | 1.07 to 4.33 |
+| `dpros = 3` versus 1 | 1.527 | 4.60 | 2.22 to 9.56 |
+| `dpros = 4` versus 1 | 1.484 | 4.41 | 1.85 to 10.52 |
+| PSA, per doubling | 0.349 | 1.42 | 1.15 to 1.75 |
+| Gleason score, per point | 0.962 | 2.62 | 1.89 to 3.62 |
+
+: Full-data coefficient estimates for the primary modern model {#tbl-primary-coefficients}
+
+Holding the remaining predictors constant, higher digital rectal examination categories were associated with greater odds of capsule penetration relative to category 1. Each doubling of PSA was associated with approximately 42% higher odds of capsule penetration, and each one-point increase in Gleason score was associated with approximately 2.62 times the odds.
+
+Age contributed little additional information after accounting for `dpros`, PSA, and Gleason score.
+
+These estimates describe conditional associations within the complete historical dataset. They do not establish causal effects. The model's apparent performance when fitted to all observations is also not an estimate of out-of-sample accuracy; the cross-validated results remain primary.
 
 ## Sensitivity and exploratory results
 
-<!--
-Table 5: dcaps, zero-Gleason, and tumor-volume conclusions.
-Keep the detailed volume curve in supplementary material.
--->
+The principal findings from the prespecified sensitivity and exploratory analyses are summarized in @tbl-sensitivity-results.
+
+| Analysis | Main performance finding | Calibration finding | Conclusion |
+|---|---|---|---|
+| Add `dcaps` | Negligible and inconsistent changes | Calibration slope decreased by approximately 0.011 | No meaningful incremental predictive value |
+| Exclude zero-Gleason records | Matched performance was effectively unchanged | Intercept and slope were effectively unchanged | Primary conclusions were robust |
+| Add two-part tumor volume | Small improvements in AUC and prediction error | Calibration slope decreased by approximately 0.021 | Inconclusive and exploratory |
+
+: Summary of sensitivity and exploratory analyses {#tbl-sensitivity-results}
+
+### Addition of `dcaps`
+
+Adding `dcaps` to the primary model increased mean AUC by approximately 0.00017 and reduced the Brier score by approximately 0.00018. However, log loss increased by approximately 0.00059, and the calibration slope moved approximately 0.011 farther from one.
+
+The changes were extremely small and did not consistently favor the extended model. The full-data coefficient for `dcaps` was also imprecisely estimated. The analysis therefore found no meaningful or stable incremental predictive value from adding `dcaps` beyond age, `dpros`, PSA, and Gleason score.
+
+### Exclusion of zero-Gleason records
+
+Records 282 and 357, both of which had `capsule = 0`, were excluded in the prespecified data-quality sensitivity analysis. The reduced analysis population contained 378 observations and 153 capsule-penetration outcomes.
+
+For the matched comparison on the same 378 observations, AUC rankings were unchanged, the mean Brier-score difference was less than 0.000001, and the mean log-loss difference was less than 0.000002. Calibration and full-data coefficients were also effectively unchanged.
+
+The two zero Gleason scores therefore did not materially affect the analysis. Retaining them in the primary model, in accordance with the documented public data, is supported by this result.
+
+### Exploratory tumor-volume model
+
+The exploratory model added an indicator distinguishing zero from positive recorded tumor volume and a `log2(vol)` term among observations with positive volume.
+
+Relative to the primary model, it increased mean AUC by approximately 0.0032, reduced the Brier score by approximately 0.0011, and reduced log loss by approximately 0.0007. These small improvements were not uniform across repeats and were accompanied by a calibration slope approximately 0.021 farther from one.
+
+In the full-data exploratory model, the coefficient distinguishing zero from positive volume was imprecise, the coefficient for changes among positive volumes was effectively zero, and the fitted relationship was nearly flat across the positive-volume range. Any apparent predictive information may therefore arise primarily from the distinction between zero and positive recorded volume rather than from increasing tumor volume.
+
+Because the meaning of the 167 zero values is uncertain, this distinction cannot be interpreted confidently. The tumor-volume result is therefore classified as inconclusive and exploratory and does not justify adding volume to the primary model. The fitted exploratory relationship is shown in @fig-volume in the supplementary material.
+
+Overall, the sensitivity analyses supported the primary conclusions. Neither `dcaps` nor the unusual zero Gleason records materially changed the findings, and the small exploratory improvements from tumor volume were offset by worse calibration and uncertainty about its historical coding.
 
 # Discussion
 
