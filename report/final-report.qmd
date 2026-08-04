@@ -658,21 +658,85 @@ Finally, no model was externally validated, prospectively evaluated, or compared
 
 # Reproducibility and Transparency
 
-<!--
-Summarize public acquisition, renv, validation, fixed seed, saved assignments,
-machine-readable outputs, deterministic reruns, prespecification, and absence
-of material deviations.
+The project was organized as a sequence of documented and independently reviewable stages. Historical reproduction was separated from modern model development so that the 2018 analysis could be assessed on its own terms before methodological extensions were introduced.
 
-Table 6: reproducibility map from scripts to outputs.
--->
+The modern analysis plan, predictor specifications, candidate models, validation procedure, performance measures, and sensitivity analyses were documented before the modern models were fitted and compared. A formal sample-size and model-complexity assessment was also completed before model fitting.
+
+The analysis followed the approved protocol. No stepwise selection, univariate predictor screening, class balancing, unrestricted algorithm comparison, or post hoc search for additional models was performed. The primary modern model retained its prespecified status even though it did not materially outperform the historical benchmark. The `dcaps` analysis remained a sensitivity analysis, and the tumor-volume analysis remained exploratory after their results were examined.
+
+## Reproducible workflow
+
+The principal workflow stages are summarized in @tbl-reproducibility-map.
+
+| Stage | Script | Principal inputs | Principal outputs and controls |
+|---|---|---|---|
+| Public data acquisition | `R/01_acquire_data.R` | `lbreg::PCS` | Verifies source dimensions, variables, identifiers, outcome counts, and missingness; creates the historical and modern processed datasets and records MD5 checksums |
+| Historical reproduction | `R/02_reproduce_2018.R` | `data/processed/prostate_2018.rds` | Produces descriptive, univariate, model-selection, final-model, and diagnostic results under `results/historical/` and figures under `figures/historical/` |
+| Modern input validation | `R/03_validate_inputs.R` | `data/processed/prostate_modern.rds` and acquisition metadata | Performs 25 integrity, structure, coding, range, missingness, transformation, and model-readiness checks; stops if a required check fails |
+| Primary modern analysis | `R/04_modern_analysis.R` | Validated modern data | Creates and saves stratified repeated cross-validation assignments, out-of-fold predictions, performance summaries, full-data model results, diagnostics, and primary figures |
+| Sensitivity and exploratory analyses | `R/05_sensitivity_analyses.R` | Validated modern data and saved resampling assignments | Reuses the primary folds for the `dcaps`, zero-Gleason, and tumor-volume analyses; saves paired comparisons, predictions, diagnostics, summaries, and the exploratory volume figure |
+
+: Reproducibility map from analysis stages to scripts and outputs {#tbl-reproducibility-map}
+
+The scripts are intended to be run from the project root in numerical order. Each script checks for required project files and expected inputs before performing its analysis. The workflow stops when expected dataset properties, files, transformations, resampling assignments, or output conditions are not satisfied.
+
+Generated processed datasets are excluded from version control because they can be recreated from the documented public source. The acquisition script records the source package version, R version, transformations, dataset dimensions, outcome counts, missing-value locations, and MD5 checksums of the generated files.
+
+The modern input-validation script compares the processed dataset with its recorded checksum and verifies the planned transformations before model fitting. All 25 checks passed for the analysis reported here.
+
+## Computational environment and resampling
+
+Package versions are recorded in `renv.lock`. The project environment can be restored with:
+
+```r
+renv::restore()
+```
+
+The modern analysis used the fixed random seed `20260803`. All 7,600 cross-validation assignments were saved, and identical folds were used for every primary model comparison. The sensitivity and exploratory analyses reused those assignments rather than generating new partitions.
+
+All data-dependent modeling operations were performed within the corresponding cross-validation analysis fold. In particular, the natural-spline basis was constructed without using held-out assessment observations. No outcome information from an assessment fold was used to fit the model generating that fold's predictions.
+
+Machine-readable out-of-fold predictions, repeat-level performance estimates, paired model comparisons, coefficients, diagnostics, and analysis metadata are retained under `results/`. Figures are produced programmatically and stored under `figures/`.
+
+The scripts record convergence and prediction checks for every fitted cross-validation model. All models converged, all expected predictions were generated, and all probabilities were finite and strictly between zero and one.
+
+## Documentation and provenance
+
+The repository preserves separate documents for:
+
+- the historical reproduction protocol;
+- the historical reproduction findings;
+- the modern analysis plan;
+- the formal sample-size and model-complexity assessment; and
+- the modern analysis findings.
+
+These documents provide technical detail without requiring the integrated report to duplicate every calculation or implementation decision.
+
+The original 2018 report is treated as a historical source and is not silently revised. Corrections and ambiguities identified by the reproduction are documented in the new materials instead.
+
+Git records the development history of the project, including the addition and review of the data policy, analysis plans, scripts, results, findings, and integrated report. This staged history distinguishes decisions made before analysis from interpretations made after results were available.
+
+Together, the public data source, recorded package environment, validation checks, fixed seed, saved resampling assignments, scripted outputs, and version history provide an auditable path from source data to reported conclusions.
 
 # Conclusions
 
-<!--
-State the historical reproducibility, corrected and ambiguous findings,
-cross-validated AUC near 0.81, lack of improvement from added complexity,
-preference for parsimony, and need for external validation.
--->
+The principal numerical results of the 2018 SDSU analysis were highly reproducible. Dataset counts, descriptive results, principal univariate findings, final-model coefficients, confidence intervals, odds ratios, and the reported AIC were recovered from the verified historical data.
+
+The reproduction identified two qualifications. The p-value reported as 0.31 for `dpros = 2` was reproduced as 0.02997 and is best understood as a typographical error. The documented stepwise AIC procedure also selected a model different from the final model reported in 2018, and the reason for that transition could not be determined from the available materials.
+
+The modern extension found that baseline digital rectal examination findings, PSA, and Gleason score provided useful but imperfect prediction of prostatic capsule penetration. The historical benchmark achieved a mean internally validated ROC AUC of approximately 0.81.
+
+The prespecified primary modern model performed almost identically to the historical benchmark. Representing PSA as `log2(psa)` provided a clearer interpretation in terms of PSA doubling, but adding age and changing the PSA representation did not materially improve predictive performance.
+
+The nonlinear PSA model added complexity and prediction instability without improving discrimination, calibration, or overall prediction error. Calibration slopes below one for all primary comparison models indicated modest overfitting, with the greatest overfitting in the nonlinear model.
+
+Adding `dcaps` did not provide meaningful incremental predictive value, and excluding the two zero Gleason scores did not change the conclusions. Tumor volume produced small exploratory improvements in some measures but worse calibration, a nearly flat relationship among positive values, and unresolved uncertainty about the meaning of its numerous zero values. It should not be added to the primary model on the basis of these results.
+
+The overall findings favor parsimony. Within this dataset, a straightforward logistic regression model performed as well as the examined extensions, while additional flexibility did not produce a clear and stable benefit.
+
+The project also shows that the most meaningful modernization of a historical analysis may lie in its scientific process rather than its model complexity. Public data acquisition, prespecification, formal complexity assessment, leakage controls, repeated internal validation, calibration assessment, sensitivity analysis, and transparent reporting strengthened the evidence without requiring a more elaborate algorithm.
+
+These conclusions apply only to this small, confidentiality-modified dataset from a single historical clinical setting. No model has been externally or prospectively validated, and clinical utility was not evaluated. The models should therefore be regarded as educational demonstrations of reproducible prediction analysis, not as contemporary clinical prediction tools.
 
 # References {.unnumbered}
 
