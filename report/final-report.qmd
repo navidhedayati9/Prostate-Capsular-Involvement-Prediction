@@ -1,5 +1,5 @@
 ---
-title: "Predicting Prostatic Capsule Penetration"
+title: "Prostate Capsular Involvement Prediction"
 subtitle: "A Modern Extension of a 2018 Analysis"
 author: "Navid Hedayati"
 date: "August 2026"

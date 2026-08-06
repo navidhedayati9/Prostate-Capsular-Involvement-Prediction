@@ -1,4 +1,4 @@
-# Predicting Prostatic Capsule Penetration
+# Prostate Capsular Involvement Prediction
 
 ## A Modern Extension of a 2018 Analysis
 
